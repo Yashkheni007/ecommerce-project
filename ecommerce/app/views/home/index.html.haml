@@ -1,0 +1,1268 @@
+%main
+  / Main jumbotron for a primary marketing message or call to action
+  .slider-wrapper.my-40.my-sm-25.float-left.w-100
+    .container
+      .ttloading-bg
+      .slider.slider-for.owl-carousel
+        %div
+          %a{href: "#"}
+            %img{alt: "", height: "800", src: asset_path('slider/sample-01.jpg'), width: "1600"}/
+          .slider-content-wrap.center.effect_top
+            .slider-title.mb-20.text-capitalize.float-left.w-100 our specials
+            .slider-subtitle.mb-50.text-capitalize.float-left.w-100 fashion trend
+            .slider-button.text-uppercase.float-left.w-100
+              %a{href: " #"} Shop Now
+        %div
+          %a{href: "#"}
+            %img{alt: "", height: "800", src: asset_path('slider/sample-02'), width: "1600"}/
+          .slider-content-wrap.center.effect_bottom
+            .slider-title.mb-20.text-capitalize.float-left.w-100 about us
+            .slider-subtitle.mb-50.text-capitalize.float-left.w-100 fashion style
+            .slider-button.text-uppercase.float-left.w-100
+              %a{href: " #"} Shop Now
+  .main-content
+    #ttcmsbanner.ttcmsbanner.my-40.my-sm-25
+      .ttbannerblock.container.text-center
+        .row
+          .ttbanner1.ttbanner.col-sm-6.col-xs-6.left-to-right.hb-animate-element
+            .ttbanner-img
+              %a{href: "#"}
+                %img{alt: "cms-01", height: "600", src: asset_path('banner/cms-01.jpg'), width: "630"}/
+            .ttbanner-inner.d-inline-block.align-top.float-none
+              .ttbanner-desc.float-left.w-100
+                %h2.ttbanner-heading.text-uppercase.float-left.w-100 Womens
+                %span.title.text-uppercase.float-left.w-100.pb-3 collection
+                %span.subtitle.float-left.w-100.py-20 Et harum quidem rerum facilis est et expedita m libero tempore, cum solut
+                %span.shop-now.float-left.w-100
+                  %a.d-inline-block.align-top.float-none.btn-primary{href: "#"} Shop Now
+          .ttbanner2.ttbanner.col-sm-6.col-xs-6.right-to-left.hb-animate-element
+            .ttbanner-img
+              %a{href: "#"}
+                %img{alt: "cms-02", height: "600", src: asset_path('banner/cms-02.jpg'), width: "630"}/
+            .ttbanner-inner.d-inline-block.align-top.float-none
+              .ttbanner-desc
+                %h2.ttbanner-heading.text-uppercase Men's
+                %span.title.text-uppercase.float-left.w-100.pb-3 collection
+                %span.subtitle.float-left.w-100.py-20 Et harum quidem rerum facilis est et expedita m libero tempore, cum solut
+                %span.shop-now.float-left.w-100
+                  %a.d-inline-block.align-top.float-none.btn-primary{href: "#"} Shop Now
+    #main
+      #hometab.home-tab.my-40.my-sm-25.bottom-to-top.hb-animate-element
+        .container
+          .row
+            .tt-title.d-inline-block.float-none.w-100.text-center Trending Products
+            .tabs
+              %ul.nav.nav-tabs.justify-content-center
+                %li.nav-item
+                  %a#featured-tab.nav-link.active{"data-toggle" => "tab", href: "#ttfeatured-main"}
+                    .tab-title Featured
+                %li.nav-item
+                  %a#new-tab.nav-link{"data-toggle" => "tab", href: "#ttnew-main"}
+                    .tab-title Latest
+                %li.nav-item
+                  %a#bestseller-tab.nav-link{"data-toggle" => "tab", href: "#ttbestseller-main"}
+                    .tab-title Bestseller
+            .tab-content.float-left.w-100
+              #ttfeatured-main.tab-pane.active.float-left.w-100{"aria-labelledby" => "featured-tab", role: "tabpanel"}
+                %section#ttfeatured.ttfeatured-products
+                  #owl1.ttfeatured-content.products.grid.owl-carousel
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "01", height: "501", src: asset_path('products/01.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                          %ul.countdown1.countdown
+                            %li
+                              %span.days 00
+                              %p.days_text Days
+                            %li
+                              %span.hours 00
+                              %p.hours_text Hours
+                            %li
+                              %span.minutes 00
+                              %p.minutes_text Minutes
+                            %li
+                              %span.seconds 00
+                              %p.seconds_text Seconds
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Merino Small Dress
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                          .flags
+                            .sale sale
+                            .new new
+                          %ul.countdown.countdown2
+                            %li
+                              %span.days 00
+                              %p.days_text Days
+                            %li
+                              %span.hours 00
+                              %p.hours_text Hours
+                            %li
+                              %span.minutes 00
+                              %p.minutes_text Minutes
+                            %li
+                              %span.seconds 00
+                              %p.seconds_text Seconds
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Tropical Shirt Dress
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "04", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Shoulder Embroidered Bodysuit
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "04", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "05", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Checked Polo Collar T-shirt
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "05", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "06", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Crochet Detail Lightweight Top
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "06", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "07", height: "501", src: asset_path('products/07.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Girls Floral Print Jumpsuit
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "07", height: "501", src: asset_path('products/07.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "08", height: "501", src: asset_path('products/08.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Girls Striped Fit and Flare Dress
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", disabled: "disabled", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/08.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "09", height: "501", src: asset_path('products/09.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Juventus Henley Neck Jersey
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+              #ttnew-main.tab-pane.float-left.w-100{"aria-labelledby" => "new-tab", role: "tabpanel"}
+                %section#ttnew.ttnew-products
+                  #owl2.ttnew-content.products.grid.owl-carousel
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "01", height: "501", src: asset_path('products/01.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                          %ul.countdown1.countdown
+                            %li
+                              %span.days 00
+                              %p.days_text Days
+                            %li
+                              %span.hours 00
+                              %p.hours_text Hours
+                            %li
+                              %span.minutes 00
+                              %p.minutes_text Minutes
+                            %li
+                              %span.seconds 00
+                              %p.seconds_text Seconds
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Printed Dugaree with T-Shirt
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", disabled: "disabled", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Printed Polo Collar T-shirt
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "04", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Burgundy Small Dresss
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "04", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "05", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Merino Small Dress
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "05", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "06", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Arkun Bordeaux Blouse
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "06", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "07", height: "501", src: asset_path('products/07.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Medium Denim Overshirt
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/07.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "08", height: "501", src: asset_path('products/08.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "#"} Long Sleeves Cotton Polo
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", disabled: "disabled", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "08", height: "501", src: asset_path('products/08.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "09", height: "501", src: asset_path('products/09.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Long Sleeves Cotton Polo
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+              #ttbestseller-main.tab-pane.float-left.w-100{"aria-labelledby" => "bestseller-tab", role: "tabpanel"}
+                %section#ttbestseller.ttbestseller-products
+                  #owl3.ttbestseller-content.products.grid.owl-carousel
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "01", height: "501", src: asset_path('products/01.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                          %ul.countdown1.countdown
+                            %li
+                              %span.days 00
+                              %p.days_text Days
+                            %li
+                              %span.hours 00
+                              %p.hours_text Hours
+                            %li
+                              %span.minutes 00
+                              %p.minutes_text Minutes
+                            %li
+                              %span.seconds 00
+                              %p.seconds_text Seconds
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Slim-fit Leaf-Print Linen Shirt
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#product_view", "data-toggle" => "modal", disabled: "disabled", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Women Floral Print Lounge T-Shirt
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "04", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Women Striped Shirt Dress
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "05", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Women Solid Bodycon Dress
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                            %img.second_image.img-responsive{alt: "06", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Printed V-Neck T-shirt
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Solid Straight Kurta
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/07.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Tropical Shirt Dress
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#product_view", "data-toggle" => "modal", disabled: "disabled", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+                    .product-layouts
+                      .product-thumb
+                        .image.zoom
+                          %a{href: "product-details.html"}
+                            %img{alt: "03", height: "501", src: asset_path('products/08.jpg'), width: "385"}/
+                        .thumb-description
+                          .caption
+                            %h4.product-title.text-capitalize
+                              %a{href: "product-details.html"} Shoulder Embroidered Bodysuit
+                          .rating
+                            .product-ratings.d-inline-block.align-middle
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                              %span.fa.fa-stack
+                                %i.material-icons.off star
+                          .price
+                            .regular-price $100.00
+                            .old-price $150.00
+                          .button-wrapper
+                            .button-group.text-center
+                              %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons shopping_cart
+                                %span Add to cart
+                              %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                                %i.material-icons favorite
+                                %span wishlist
+                              %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                                %i.material-icons visibility
+                                %span Quick View
+      #ttcmssubbanner.ttcmssubbanner.my-40.my-sm-25.bottom-to-top.hb-animate-element
+        .ttbannerblock.container
+          .row
+            .ttbanner1.ttbanner.col-sm-6.col-xs-6
+              .ttbanner-img
+                %a{href: "#"}
+                  %img{alt: "cms-03", height: "600", src: asset_path('banner/cms-03.jpg'), width: "400"}/
+              .ttbanner-inner
+                .ttbanner-desc.text-center
+                  %span.title.text-uppercase summer shop
+                  %span.subtitle.text-uppercase.py-20 up to 70% off
+                  %span.shop-now.text-capitalize
+                    %a.btn-primary{href: "#"} shop now
+            .ttbanner2.ttbanner.col-sm-6
+              .ttbanner-img
+                %a{href: "#"}
+                  %img{alt: "cms-04", height: "600", src: asset_path('banner/cms-04.jpg'), width: "400"}/
+              .ttbanner-inner
+                .ttbanner-desc.text-center
+                  %span.title.text-uppercase winter shop
+                  %span.subtitle.text-uppercase.py-20 up to 70% off
+                  %span.shop-now.text-capitalize
+                    %a.btn-primary{href: "#"} shop now
+      #ttspecial.ttspecial.my-40.bottom-to-top.hb-animate-element
+        .container
+          .row
+            .tt-title.d-inline-block.float-none.w-100.text-center special products
+            .ttspecial-content.products.grid.owl-carousel
+              .product-layouts
+                .product-thumb
+                  .image.zoom
+                    %a{href: "#"}
+                      %img{alt: "01", height: "501", src: asset_path('products/01.jpg'), width: "385"}/
+                      %img.second_image.img-responsive{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                    %ul.countdown3.countdown
+                      %li
+                        %span.days 00
+                        %p.days_text Days
+                      %li
+                        %span.hours 00
+                        %p.hours_text Hours
+                      %li
+                        %span.minutes 00
+                        %p.minutes_text Minutes
+                      %li
+                        %span.seconds 00
+                        %p.seconds_text Seconds
+                  .thumb-description
+                    .caption
+                      %h4.product-title.text-capitalize
+                        %a{href: "product-details.html"} Checked Polo Collar T-shirt
+                    .rating
+                      .product-ratings.d-inline-block.align-middle
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                    .price
+                      .regular-price $100.00
+                      .old-price $150.00
+                    .button-wrapper
+                      .button-group.text-center
+                        %button.btn.btn-primary.btn-cart{"data-target" => "#product_view", "data-toggle" => "modal", disabled: "disabled", type: "button"}
+                          %i.material-icons shopping_cart
+                          %span Add to cart
+                        %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                          %i.material-icons favorite
+                          %span wishlist
+                        %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons visibility
+                          %span Quick View
+              .product-layouts
+                .product-thumb
+                  .image.zoom
+                    %a{href: "#"}
+                      %img{alt: "02", height: "501", src: asset_path('products/02.jpg'), width: "385"}/
+                      %img.second_image.img-responsive{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                  .thumb-description
+                    .caption
+                      %h4.product-title.text-capitalize
+                        %a{href: "product-details.html"} Crochet Detail Lightweight Top
+                    .rating
+                      .product-ratings.d-inline-block.align-middle
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                    .price
+                      .regular-price $100.00
+                      .old-price $150.00
+                    .button-wrapper
+                      .button-group.text-center
+                        %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons shopping_cart
+                          %span Add to cart
+                        %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                          %i.material-icons favorite
+                          %span wishlist
+                        %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons visibility
+                          %span Quick View
+              .product-layouts
+                .product-thumb
+                  .image.zoom
+                    %a{href: "#"}
+                      %img{alt: "03", height: "501", src: asset_path('products/03.jpg'), width: "385"}/
+                      %img.second_image.img-responsive{alt: "04", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                  .thumb-description
+                    .caption
+                      %h4.product-title.text-capitalize
+                        %a{href: "product-details.html"} Girls Floral Print Jumpsuit
+                    .rating
+                      .product-ratings.d-inline-block.align-middle
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                    .price
+                      .regular-price $100.00
+                      .old-price $150.00
+                    .button-wrapper
+                      .button-group.text-center
+                        %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons shopping_cart
+                          %span Add to cart
+                        %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                          %i.material-icons favorite
+                          %span wishlist
+                        %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons visibility
+                          %span Quick View
+              .product-layouts
+                .product-thumb
+                  .image.zoom
+                    %a{href: "#"}
+                      %img{alt: "04", height: "501", src: asset_path('products/04.jpg'), width: "385"}/
+                      %img.second_image.img-responsive{alt: "05", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                  .thumb-description
+                    .caption
+                      %h4.product-title.text-capitalize
+                        %a{href: "product-details.html"} Girls Striped Fit and Flare Dress
+                    .rating
+                      .product-ratings.d-inline-block.align-middle
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                    .price
+                      .regular-price $100.00
+                      .old-price $150.00
+                    .button-wrapper
+                      .button-group.text-center
+                        %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons shopping_cart
+                          %span Add to cart
+                        %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                          %i.material-icons favorite
+                          %span wishlist
+                        %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons visibility
+                          %span Quick View
+              .product-layouts
+                .product-thumb
+                  .image.zoom
+                    %a{href: "#"}
+                      %img{alt: "05", height: "501", src: asset_path('products/05.jpg'), width: "385"}/
+                      %img.second_image.img-responsive{alt: "06", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                  .thumb-description
+                    .caption
+                      %h4.product-title.text-capitalize
+                        %a{href: "product-details.html"} Juventus Henley Neck Jersey
+                    .rating
+                      .product-ratings.d-inline-block.align-middle
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                    .price
+                      .regular-price $100.00
+                      .old-price $150.00
+                    .button-wrapper
+                      .button-group.text-center
+                        %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons shopping_cart
+                          %span Add to cart
+                        %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                          %i.material-icons favorite
+                          %span wishlist
+                        %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons visibility
+                          %span Quick View
+              .product-layouts
+                .product-thumb
+                  .image.zoom
+                    %a{href: "#"}
+                      %img{alt: "06", height: "501", src: asset_path('products/06.jpg'), width: "385"}/
+                      %img.second_image.img-responsive{alt: "07", height: "501", src: asset_path('products/07.jpg'), width: "385"}/
+                  .thumb-description
+                    .caption
+                      %h4.product-title.text-capitalize
+                        %a{href: "product-details.html"} Printed Dugaree with T-Shirt
+                    .rating
+                      .product-ratings.d-inline-block.align-middle
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                    .price
+                      .regular-price $100.00
+                      .old-price $150.00
+                    .button-wrapper
+                      .button-group.text-center
+                        %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons shopping_cart
+                          %span Add to cart
+                        %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                          %i.material-icons favorite
+                          %span wishlist
+                        %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons visibility
+                          %span Quick View
+      #ttbrandlogo.my-40.my-sm-25.bottom-to-top.hb-animate-element
+        .container
+          .tt-brand.owl-carousel
+            .item
+              %a{href: "#"}
+                %img{alt: "brand-logo-01", height: "100", src: asset_path('logos/brand-logo-01.png'), width: "140"}/
+            .item
+              %a{href: "#"}
+                %img{alt: "brand-logo-02", height: "100", src: asset_path('logos/brand-logo-02.png'), width: "140"}/
+            .item
+              %a{href: "#"}
+                %img{alt: "brand-logo-03", height: "100", src: asset_path('logos/brand-logo-03.png'), width: "140"}/
+            .item
+              %a{href: "#"}
+                %img{alt: "brand-logo-04", height: "100", src: asset_path('logos/brand-logo-04.png'), width: "140"}/
+            .item
+              %a{href: "#"}
+                %img{alt: "brand-logo-05", height: "100", src: asset_path('logos/brand-logo-05.png'), width: "140"}/
+            .item
+              %a{href: "#"}
+                %img{alt: "brand-logo-06", height: "100", src: asset_path('logos/brand-logo-06.png'), width: "140"}/

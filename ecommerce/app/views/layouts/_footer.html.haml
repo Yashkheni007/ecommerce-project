@@ -1,0 +1,80 @@
+.block-newsletter
+  .parallax{"data-source-url" => asset_path('banner/parallax.jpg'), style: "background-image: url(#{asset_path('banner/parallax.jpg')}); background-position:50% 65.8718%;"}
+    .container
+      .tt-newsletter.col-sm-7
+        %h2.text-uppercase Subscribe to our Newsletter
+      .block-content.col-sm-5
+        %form{action: "contact-us.html", method: "get"}
+          .input-group
+            %input.form-control{name: "email", placeholder: "Email address..", required: "", type: "email", value: ""}/
+            %span.input-group-btn
+              %button.btn.btn-theme.text-uppercase.btn-primary{type: "submit"} Subscribe
+%footer.page-footer.font-small.footer-default
+  .container.text-center.text-md-left
+    .row
+      .col-md-2.footer-cms.footer-column
+        .ttcmsfooter
+          .footer-logo
+            %img{alt: "footer-logo", height: "50", src: asset_path('logos/footer-logo.png'), width: "200"}/
+          .footer-desc At vero eos et accusamus et iusto odio dignissimos ducimus, duis faucibus enim vitae
+      .col-md-2.footer-column
+        .title
+          %a.font-weight-normal.text-capitalize.mb-10{"aria-expanded" => "false", "data-toggle" => "collapse", href: "#company"} company
+        %ul#company.list-unstyled.collapse
+          %li
+            %a{href: "category.html"} New Products
+          %li
+            %a{href: "category.html"} Best Collection
+          %li
+            %a{href: "wishlist.html"} wishlist
+      .col-md-2.footer-column
+        .title
+          %a.font-weight-normal.text-capitalize.mb-10{"aria-expanded" => "false", "data-toggle" => "collapse", href: "#products"} products
+        %ul#products.list-unstyled.collapse
+          %li
+            %a{href: "blog-details.html"} blog
+          %li
+            %a{href: "about-us.html"} about us
+          %li
+            %a{href: "contact-us.html"} contact us
+      .col-md-2.footer-column
+        .title
+          %a.font-weight-normal.text-capitalize.mb-10{"aria-expanded" => "false", "data-toggle" => "collapse", href: "#account"} your account
+        %ul#account.list-unstyled.collapse
+          %li
+            %a{href: "blog-details.html"} personal info
+          %li
+            %a{href: "my-account.html"} my account
+          %li
+            %a{href: "#"} orders
+          %li
+            %a{href: "contact-us.html"} addresses
+      .col-md-2.footer-column
+        .title
+          %a.font-weight-normal.text-capitalize.mb-10{"aria-expanded" => "false", "data-toggle" => "collapse", href: "#information"} store information
+        %ul#information.list-unstyled.collapse
+          %li.contact-detail.links
+            %span.address
+              %span.icon
+                %i.material-icons location_on
+              %span.data 4030, Central Bazzar, opp. Varachha Police Station, Varachha Main Road, Surat, Gujarat 395006, India
+          %li.links
+            %span.contact
+              %span.icon
+                %i.material-icons phone
+              %span.data
+                %a{href: "tel:(99)55669999"} + (99) 55-669-999
+          %li.links
+            %span.email
+              %span.icon
+                %i.material-icons email
+              %span.data
+                %a{href: "mailto:demo.store@gmail.com"} demo.store@gmail.com
+  / Copyright
+  .footer-bottom-wrap
+    .container
+      .row
+        .footer-copyright.text-center.py-3
+          © 2019 - Boostrap theme by store™
+  %a#goToTop.btn-primary{href: "#", title: "Back to top"}
+    %i.material-icons.arrow-up keyboard_arrow_up

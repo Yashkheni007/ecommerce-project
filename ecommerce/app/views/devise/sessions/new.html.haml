@@ -1,0 +1,24 @@
+#modalLoginForm.fade.show{"aria-hidden" => "true"}
+  .modal-dialog{role: "document"}
+    .modal-content
+      .modal-header.text-center
+        %h3.modal-title.w-100.font-weight-medium.text-left Sign in
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .modal-body.mx-3
+          .md-form.mb-4
+            = f.label :email
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your email", class: 'form-control', id: 'LoginForm-name'
+          .md-form.mb-4
+            = f.label :password
+            %br/
+            = f.password_field :password, autocomplete: "current-password", placeholder: "Your password", class: 'form-control'
+          .checkbox-link.d-flex.justify-content-between
+            .left-col
+              - if devise_mapping.rememberable?
+                = f.check_box :remember_me
+                = f.label :remember_me
+            .right-col
+              = link_to "Forgot your password?", new_password_path(resource_name)
+        .modal-footer.d-flex.justify-content-center
+          = f.submit "Log in", class: 'btn btn-primary'

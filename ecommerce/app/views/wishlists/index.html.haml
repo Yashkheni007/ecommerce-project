@@ -1,0 +1,118 @@
+-# %h1 Listing wishlists
+
+-# %table
+-#   %thead
+-#     %tr
+-#       %th
+-#       %th
+-#       %th
+
+-#   %tbody
+-#     - @wishlists.each do |wishlist|
+-#       %tr
+-#         %td= link_to 'Show', wishlist
+-#         %td= link_to 'Edit', edit_wishlist_path(wishlist)
+-#         %td= link_to 'Destroy', wishlist, method: :delete, data: { confirm: 'Are you sure?' }
+
+-# %br
+
+-# = link_to 'New Wishlist', new_wishlist_path
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Fashion Template for Bootstrap
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %link{href: "img/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900", rel: "stylesheet"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Poppins:400,500,700,900", rel: "stylesheet"}/
+    %link{href: "https://fonts.googleapis.com/icon?family=Material+Icons", rel: "stylesheet"}/
+    / Bootstrap core CSS
+    %link{href: "vendor/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
+    / Bootstrap core CSS
+    %link{href: "css/styles.css", rel: "stylesheet"}/
+    %link{href: "css/animate.css", rel: "stylesheet"}/
+    %link{href: "css/owl-carousel.css", rel: "stylesheet"}/
+    %link{href: "css/lightbox.css", rel: "stylesheet"}/
+    / Custom styles for this template
+  %body
+    %nav.w-100.float-left{"aria-label" => "breadcrumb"}
+      %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => asset_path('banner/parallax.jpg'), style: "background-image: url('#{asset_path('banner/parallax.jpg')}'); background-position: 50% 0.809717%;"}
+        %li.breadcrumb-item
+          = link_to root_path do
+            Home
+        %li.breadcrumb-item.active{"aria-current" => "page"} Wishlist
+    .cart-area.table-area.pt-110.pb-95.float-left.w-100
+      .container
+        .cart-wrapper.float-left.w-100
+          .table-responsive
+            %table.table.product-table.text-center
+              %thead
+                %tr
+                  %th.table-remove.text-uppercase remove
+                  %th.table-image.text-uppercase image
+                  %th.table-p-name.text-uppercase product
+                  %th.table-p-price.text-uppercase price
+                  %th.table-p-qty.text-uppercase Stock Status
+                  %th.table-total.text-uppercase add to cart
+              %tbody
+                %tr
+                  %td.table-remove
+                    %button
+                      %i.material-icons delete
+                  %td.table-image
+                    %a{href: "product-details.html"}
+                      %img{alt: "", src: asset_path('products/02.jpg')}/
+                  %td.table-p-name.text-capitalize
+                    %a{href: "product-details.html"} aspetur autodit autfugit
+                  %td.table-p-price
+                    %p $100.00
+                  %td.table-p-qty in stock
+                  %td.table-addtocart
+                    %a.btn-primary.btn{href: "cart_page.html"} Add to cart
+                %tr
+                  %td.table-remove
+                    %button
+                      %i.material-icons delete
+                  %td.table-image
+                    %a{href: "product-details.html"}
+                      %img{alt: "", src: asset_path('products/03.jpg')}/
+                  %td.table-p-name.text-capitalize
+                    %a{href: "product-details.html"} magni dolores eosquies
+                  %td.table-p-price
+                    %p $100.00
+                  %td.table-p-qty in stock
+                  %td.table-addtocart
+                    %a.btn-primary.btn{href: "cart_page.html"} Add to cart
+    /
+      Bootstrap core JavaScript
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    %script{src: "js/jquery.min.js"}
+    %script{src: "js/bootstrap.min.js"}
+    %script{src: "js/owl.carousel.min.js"}
+    %script{src: "js/parallax.js"}
+    %script{src: "js/jquery-ui.min.js"}
+    %script{src: "js/ResizeSensor.min.js"}
+    %script{src: "js/theia-sticky-sidebar.min.js"}
+    %script{src: "js/custom.js"}
+    %script{src: "js/jquery.countdown.min.js"}
+    %script{src: "js/masonry.pkgd.min.js"}
+    %script{src: "js/imagesloaded.pkgd.min.js"}
+    %script{src: "js/jquery.zoom.min.js"}
+    %script{src: "js/jquery.sticky-kit.min.js"}
+    / Start of Tawk.to Script
+    :javascript
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5ac1aabb4b401e45400e4197/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    / End of Tawk.to Script

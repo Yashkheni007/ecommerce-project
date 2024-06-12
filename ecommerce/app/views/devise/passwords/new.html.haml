@@ -1,0 +1,15 @@
+#modalLoginForm.fade.show{"aria-hidden" => "true"}
+  .modal-dialog{role: "document"}
+    .modal-content
+      .modal-header.text-center
+        %h3.modal-title.w-100.font-weight-medium.text-left Forgot your password?
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .modal-body.mx-3
+          .md-form.mb-4
+            = f.label :email
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your email", class: 'form-control', id: 'LoginForm-name'
+          .actions
+            = f.submit "Send me reset password instructions", class: 'form-control'
+          = render "devise/shared/links"

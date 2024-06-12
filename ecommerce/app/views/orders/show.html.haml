@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Orderdate:
+  = @order.orderDate
+%p
+  %b Address:
+  = @order.address
+%p
+  %b City:
+  = @order.city
+%p
+  %b State:
+  = @order.state
+%p
+  %b Contry:
+  = @order.contry
+%p
+  %b Paymentmethod:
+  = @order.paymentMethod
+%p
+  %b Status:
+  = @order.status
+
+= link_to 'Edit', edit_order_path(@order)
+\|
+= link_to 'Back', orders_path

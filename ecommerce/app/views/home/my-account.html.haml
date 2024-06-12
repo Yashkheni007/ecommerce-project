@@ -1,0 +1,352 @@
+-# !!!
+-# %html{lang: "en"}
+-#   %head
+-#     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+-#     %title Fashion Template for Bootstrap
+-#     %meta{charset: "utf-8"}/
+-#     %meta{content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
+-#     %meta{content: "", name: "description"}/
+-#     %meta{content: "", name: "author"}/
+-#     %link{href: "img/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
+-#     %link{href: "https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900", rel: "stylesheet"}/
+-#     %link{href: "https://fonts.googleapis.com/css?family=Poppins:400,500,700,900", rel: "stylesheet"}/
+-#     %link{href: "https://fonts.googleapis.com/icon?family=Material+Icons", rel: "stylesheet"}/
+-#     / Bootstrap core CSS
+-#     %link{href: "vendor/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
+-#     / Bootstrap core CSS
+-#     %link{href: "css/styles.css", rel: "stylesheet"}/
+-#     %link{href: "css/animate.css", rel: "stylesheet"}/
+-#     %link{href: "css/owl-carousel.css", rel: "stylesheet"}/
+-#     %link{href: "css/lightbox.css", rel: "stylesheet"}/
+-#     / Custom styles for this template
+-#   %body
+-#     .main-content.w-100.float-left.blog-list
+-#       .container
+-#         .row
+-#           .products-grid.col-xl-9.col-lg-8.order-lg-2
+-#             .row
+-#               .col-lg-12.order-lg-last.account-content
+-#                 %h4 Edit Account Information
+-#                 %form.myacoount-form{action: "#"}
+-#                   .row
+-#                     .col-sm-12
+-#                       .row
+-#                         .col-md-4
+-#                           .form-group.required-field
+-#                             %label{for: "acc-name"}
+-#                               First Name
+-#                               %span.required *
+-#                             %input#acc-name.form-control{name: "acc-name", required: "", type: "text"}/
+-#                           / End .form-group
+-#                         / End .col-md-4
+-#                         .col-md-4
+-#                           .form-group
+-#                             %label{for: "acc-mname"}
+-#                               Middle Name
+-#                               %span.required *
+-#                             %input#acc-mname.form-control{name: "acc-mname", type: "text"}/
+-#                           / End .form-group
+-#                         / End .col-md-4
+-#                         .col-md-4
+-#                           .form-group.required-field
+-#                             %label{for: "acc-lastname"}
+-#                               Last Name
+-#                               %span.required *
+-#                             %input#acc-lastname.form-control{name: "acc-lastname", required: "", type: "text"}/
+-#                           / End .form-group
+-#                         / End .col-md-4
+-#                       / End .row
+-#                     / End .col-sm-11
+-#                   / End .row
+-#                   .form-group.required-field
+-#                     %label{for: "acc-email"} Email
+-#                     %input#acc-email.form-control{name: "acc-email", required: "", type: "email"}/
+-#                   / End .form-group
+-#                   .form-group.required-field
+-#                     %label{for: "account-password"} Password
+-#                     %input#account-password.form-control{name: "account-password", required: "", type: "password"}/
+-#                   / End .form-group
+-#                   .custom-control.custom-checkbox
+-#                     %input#change-password-checkbox.custom-control-input{type: "checkbox", value: "1"}/
+-#                     %label.custom-control-label{for: "change-password-checkbox"} Change Password
+-#                   / End .custom-checkbox
+-#                   #account-change-password
+-#                     %h4 Change Password
+-#                     .row
+-#                       .col-md-6
+-#                         .form-group.required-field
+-#                           %label{for: "account-pass2"} Password
+-#                           %input#account-pass2.form-control{name: "account-pass2", type: "password"}/
+-#                         / End .form-group
+-#                       / End .col-md-6
+-#                       .col-md-6
+-#                         .form-group.required-field
+-#                           %label{for: "account-pass3"} Confirm Password
+-#                           %input#account-pass3.form-control{name: "account-pass3", type: "password"}/
+-#                         / End .form-group
+-#                       / End .col-md-6
+-#                     / End .row
+-#                   / End #account-chage-pass
+-#                   .required.text-right * Required Field
+-#                   .form-footer.d-flex.justify-content-between.align-items-center
+-#                     %a{href: "#"}
+-#                       %i.material-icons> navigate_before
+-#                       Back
+-#                     .form-footer-right
+-#                       %button.btn.btn-primary.btn-primary{type: "submit"} Save
+-#                   / End .form-footer
+-#           .sidebar.col-xl-3.col-lg-3.order-lg-1
+-#             .sidebar-product.left-sidebar.w-100.float-left
+-#               .title
+-#                 %a.d-lg-none.block-toggler{"aria-controls" => "sidebar-product", "aria-expanded" => "false", "data-toggle" => "collapse", href: "#sidebar-product"} sale products
+-#               #sidebar-product.collapse.w-100.float-left
+-#                 .sidebar-block.sale.products
+-#                   %h3.widget-title sale products
+-#                   .product-layouts
+-#                     .product-thumb
+-#                       .image.col-sm-4.float-left
+-#                         %a{href: "/product-details.html"}
+-#                           %img{alt: "01", src: asset_path('products/01.jpg')}/
+-#                       .thumb-description.col-sm-8.text-left.float-left
+-#                         .caption
+-#                           %h4.product-title.text-capitalize
+-#                             %a{href: "product-details.html"} aliquam quaerat voluptatem
+-#                         .price
+-#                           .regular-price $100.00
+-#                           .old-price $150.00
+-#                   .product-layouts
+-#                     .product-thumb
+-#                       .image.col-sm-4.float-left
+-#                         %a{href: "/product-details.html"}
+-#                           %img{alt: "01", src: asset_path('products/02.jpg')}/
+-#                       .thumb-description.col-sm-8.text-left.float-left
+-#                         .caption
+-#                           %h4.product-title.text-capitalize
+-#                             %a{href: "product-details.html"} aspetur autodit autfugit
+-#                         .price
+-#                           .regular-price $100.00
+-#                           .old-price $150.00
+-#                   .product-layouts
+-#                     .product-thumb
+-#                       .image.col-sm-4.float-left
+-#                         %a{href: "/product-details.html"}
+-#                           %img{alt: "03", src: asset_path('products/03.jpg')}/
+-#                       .thumb-description.col-sm-8.text-left.float-left
+-#                         .caption
+-#                           %h4.product-title.text-capitalize
+-#                             %a{href: "product-details.html"} magni dolores eosquies
+-#                         .price
+-#                           .regular-price $100.00
+-#                           .old-price $150.00
+-#     / Register modal
+-#     #modalRegisterForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+-#       .modal-dialog{role: "document"}
+-#         .modal-content
+-#           .modal-header.text-center
+-#             %h4.modal-title.w-100.font-weight-medium.text-left Sign up
+-#             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+-#               %span{"aria-hidden" => "true"} ×
+-#           .modal-body.mx-3
+-#             .md-form.mb-4
+-#               %input#RegisterForm-name.form-control.validate{placeholder: "Your name", type: "text"}/
+-#             .md-form.mb-4
+-#               %input#RegisterForm-email.form-control.validate{placeholder: "Your email", type: "email"}/
+-#             .md-form.mb-4
+-#               %input#RegisterForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
+-#             .checkbox-link.d-flex.justify-content-between
+-#               .left-col
+-#                 %input#remember-me{type: "checkbox"}/
+-#                 %label{for: "remember_me"} Remember Me
+-#               .right-col
+-#                 %a{href: "#"} Forget Password?
+-#           .modal-footer.d-flex.justify-content-center
+-#             %button.btn.btn-primary Sign up
+-#     / Login modal
+-#     #modalLoginForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+-#       .modal-dialog{role: "document"}
+-#         .modal-content
+-#           .modal-header.text-center
+-#             %h4.modal-title.w-100.font-weight-medium.text-left Sign in
+-#             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+-#               %span{"aria-hidden" => "true"} ×
+-#           .modal-body.mx-3
+-#             .md-form.mb-4
+-#               %input#LoginForm-name.form-control.validate{placeholder: "Your name", type: "text"}/
+-#             .md-form.mb-4
+-#               %input#LoginForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
+-#             .checkbox-link.d-flex.justify-content-between
+-#               .left-col
+-#                 %input#remember_me{type: "checkbox"}/
+-#                 %label{for: "remember_me"} Remember Me
+-#               .right-col
+-#                 %a{href: "#"} Forget Password?
+-#           .modal-footer.d-flex.justify-content-center
+-#             %button.btn.btn-primary Sign in
+-#     / product_view modal
+-#     #product_view.modal.fade.product_view{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+-#       .modal-dialog
+-#         .modal-content
+-#           .modal-header
+-#             %h4.modal-title.w-100w-100w-100.font-weight-bold.d-none Quick view
+-#             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+-#               %span{"aria-hidden" => "true"} ×
+-#           .modal-body
+-#             .row
+-#               .col-md-6.left-columm
+-#                 .product-large-image.tab-content
+-#                   #product-1.tab-pane.active{"aria-labelledby" => "product-tab-1", role: "tabpanel"}
+-#                     .single-img.img-full
+-#                       %a{href: "img/products/01.jpg"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/01.jpg')}/
+-#                   #product-2.tab-pane{"aria-labelledby" => "product-tab-2", role: "tabpanel"}
+-#                     .single-img
+-#                       %a{href: "img/products/02.jpg"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/02.jpg')}/
+-#                   #product-3.tab-pane{"aria-labelledby" => "product-tab-3", role: "tabpanel"}
+-#                     .single-img
+-#                       %a{href: "img/products/03.jpg"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/03.jpg')}/
+-#                   #product-4.tab-pane{"aria-labelledby" => "product-tab-4", role: "tabpanel"}
+-#                     .single-img
+-#                       %a{href: "img/products/04.jpg"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/04.jpg')}/
+-#                   #product-5.tab-pane{"aria-labelledby" => "product-tab-5", role: "tabpanel"}
+-#                     .single-img
+-#                       %a{href: "img/products/05.jpg"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/05.jpg')}/
+-#                 .small-image-list.float-left.w-100
+-#                   .nav-add.small-image-slider-single-product-tabstyle-3.owl-carousel{role: "tablist"}
+-#                     .single-small-image.img-full
+-#                       %a#product-tab-1.img.active{"data-toggle" => "tab", href: "#product-1"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/01.jpg')}/
+-#                     .single-small-image.img-full
+-#                       %a#product-tab-2.img{"data-toggle" => "tab", href: "#product-2"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/02.jpg')}/
+-#                     .single-small-image.img-full
+-#                       %a#product-tab-3.img{"data-toggle" => "tab", href: "#product-3"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/03.jpg')}/
+-#                     .single-small-image.img-full
+-#                       %a#product-tab-4.img{"data-toggle" => "tab", href: "#product-4"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/04.jpg')}/
+-#                     .single-small-image.img-full
+-#                       %a#product-tab-5.img{"data-toggle" => "tab", href: "#product-5"}
+-#                         %img.img-fluid{alt: "", src: asset_path('products/05.jpg')}/
+-#               .col-md-6.product_content
+-#                 %h4.product-title.text-capitalize aliquam quaerat voluptatem
+-#                 .rating
+-#                   .product-ratings.d-inline-block.align-middle
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                 %span.description.float-left.w-100 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+-#                 %h3.price.float-left.w-100
+-#                   %span.regular-price.align-middle $75.00
+-#                   %span.old-price.align-middle $60.00
+-#                 .product-variants.float-left.w-100
+-#                   .col-md-4.col-sm-6.col-xs-12.size-options.d-flex.align-items-center
+-#                     %h5 Size:
+-#                     %select.form-control{name: "select"}
+-#                       %option{selected: "selected", value: ""} Size
+-#                       %option{value: "black"} Medium
+-#                       %option{value: "white"} Large
+-#                       %option{value: "gold"} Small
+-#                       %option{value: "rose gold"} Extra large
+-#                   .color-option.d-flex.align-items-center
+-#                     %h5 color :
+-#                     %ul.color-categories
+-#                       %li.active
+-#                         %a.tt-pink{href: "#", title: "Pink"}
+-#                       %li
+-#                         %a.tt-blue{href: "#", title: "Blue"}
+-#                       %li
+-#                         %a.tt-yellow{href: "#", title: "Yellow"}
+-#                 .btn-cart.d-flex.align-items-center.float-left.w-100
+-#                   %h5 qty:
+-#                   %input{type: "number", value: "1"}/
+-#                   %button.btn.btn-primary{type: "button"}
+-#                     %i.material-icons shopping_cart
+-#                     Add To Cart
+-#     / cart-pop modal
+-#     #cart-pop.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+-#       .modal-dialog
+-#         .modal-content
+-#           .modal-header.alert-success
+-#             %h4.modal-title.w-100w-100w-100 Product successfully added to your shopping cart
+-#             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+-#               %span{"aria-hidden" => "true"} ×
+-#           .modal-body
+-#             .row
+-#               .col-md-6.divide-right
+-#                 .row
+-#                   .col-md-5.col-xs-4.product-img.float-left
+-#                     %img.img-responsive{alt: "01", src: asset_path('products/01.jpg')}/
+-#                   .col-md-7.col-xs-8.product-desc.float-left
+-#                     %h4.product-title.text-capitalize aliquam quaerat voluptatem
+-#                     .rating
+-#                       .product-ratings
+-#                         %span.fa.fa-stack
+-#                           %i.material-icons star
+-#                         %span.fa.fa-stack
+-#                           %i.material-icons star
+-#                         %span.fa.fa-stack
+-#                           %i.material-icons star
+-#                         %span.fa.fa-stack
+-#                           %i.material-icons.off star
+-#                         %span.fa.fa-stack
+-#                           %i.material-icons.off star
+-#                     %h3.price.float-left.w-100
+-#                       %span.regular-price.align-middle $75.00
+-#                       %span.old-price.align-middle $60.00
+-#               .col-md-6.divide-left
+-#                 %p.cart-products-count There are 2 items in your cart.
+-#                 %p.total-products.float-left.w-100
+-#                   %strong Total products:
+-#                   $150.00
+-#                 %p.shipping.float-left.w-100
+-#                   %strong Total shipping:
+-#                   free
+-#                 %p.total-price.float-left.w-100
+-#                   %strong Total:
+-#                   $150.00(tax incl.)
+-#                 .cart-content-btn.float-left.w-100
+-#                   %form{action: "#"}
+-#                     %input.btn.pull-right.mt_10.btn-primary{type: "submit", value: "Continue shopping"}/
+-#                   %form{action: "checkout_page.html"}
+-#                     %input.btn.pull-right.mt_10.btn-primary{type: "submit", value: "Proceed to checkout"}/
+-#     /
+-#       Bootstrap core JavaScript
+-#       \==================================================
+-#     / Placed at the end of the document so the pages load faster
+-#     %script{src: "js/jquery.min.js"}
+-#     %script{src: "js/bootstrap.min.js"}
+-#     %script{src: "js/owl.carousel.min.js"}
+-#     %script{src: "js/custom.js"}
+-#     %script{src: "js/parallax.js"}
+-#     %script{src: "js/lightbox-2.6.min.js"}
+-#     %script{src: "js/ResizeSensor.min.js"}
+-#     %script{src: "js/theia-sticky-sidebar.min.js"}
+-#     %script{src: "js/inview.js"}
+-#     %script{src: "js/cookiealert.js"}
+-#     %script{src: "js/jquery.countdown.min.js"}
+-#     %script{src: "js/masonry.pkgd.min.js"}
+-#     %script{src: "js/imagesloaded.pkgd.min.js"}
+-#     %script{src: "js/jquery.zoom.min.js"}
+-#     / Start of Tawk.to Script
+-#     :javascript
+-#       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+-#       (function(){
+-#       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+-#       s1.async=true;
+-#       s1.src='https://embed.tawk.to/5ac1aabb4b401e45400e4197/default';
+-#       s1.charset='UTF-8';
+-#       s1.setAttribute('crossorigin','*');
+-#       s0.parentNode.insertBefore(s1,s0);
+-#       })();
+-#     / End of Tawk.to Script

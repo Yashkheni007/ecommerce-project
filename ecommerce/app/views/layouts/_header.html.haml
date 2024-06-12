@@ -1,0 +1,319 @@
+%body
+  %header.header-area.header-sticky.text-center.header-default
+    .header-main-sticky
+      .header-nav
+        .container
+          .nav-left.float-left
+            - if user_signed_in?
+              .ttheader-service
+                Welcome
+                - if current_user.present?
+                  = current_user.full_name
+                -# = button_to 'Log Out', destroy_user_session_path, method: :get
+                -# = button_to 'Log Out', destroy_user_session_path, method: :delete
+          .nav-right.float-right.d-flex
+            .ttheader-mail
+              %a{href: "mailto:demo.store@gmail.com"} demo.store@gmail.com
+      .header-main-head
+        .header-main
+          .container
+            .header-left.float-left.d-flex.d-lg-flex.d-md-block.d-xs-block
+              .language-wrapper.toggle
+                %button.btn.text-capitalize.dropdown-toggle{type: "button"}
+                  %img{alt: "en", height: "12", src: asset_path('banner/en.png'), width: "18"}/
+                  %span English
+                #language-dropdown.language
+                  %ul
+                    %li
+                      %img{alt: "en", height: "12",src: asset_path('banner/en.png'), width: "18"}/
+                      %span English
+                    %li
+                      %img{alt: "fr", height: "12", src: asset_path('banner/in.png'), width: "18"}/
+                      %span Gujrati
+              .contact
+                %i.material-icons phone
+                %a{href: "tel:+1234567890"} 1234567890
+            .header-middle.float-lg-left.float-md-left.float-sm-left.float-xs-none
+              .logo
+                = link_to root_path do
+                  %img{alt: "logo", height: "50", src: asset_path('logos/logo.png'), width: "200"}/
+            .header-right.d-flex.d-xs-flex.d-sm-flex.justify-content-end.float-right
+              .search-wrapper
+                %a
+                  %i.material-icons.search search
+                  %i.material-icons.close close
+                %form.search-form{action: "/action_page.php", autocomplete: "off"}
+                  .autocomplete
+                    %input#myInput{name: "myCountry", placeholder: "Search here", type: "text"}/
+                    %button{type: "button"}
+                      %i.material-icons search
+              .user-info
+                %button.btn{type: "button"}
+                  %i.material-icons perm_identity
+                #user-dropdown.user-menu
+                  %ul
+                    - if user_signed_in?
+                      %li
+                        = link_to "My Account", "my-account.html", class: "text-capitalize"
+                    %li
+                      %a.modal-view.button{href: new_user_registration_path} Register
+                    %li
+                      %a.modal-view.button{href: new_user_session_path} login
+                    - if user_signed_in?
+                      %li
+                      = link_to 'Sign Out', destroy_user_session_path, method: :delete
+              .cart-wrapper
+                %button.btn{type: "button"}
+                  %i.material-icons shopping_cart
+                  %span.ttcount 2
+                #cart-dropdown.cart-menu
+                  %ul.w-100.float-left
+                    %li
+                      %table.table.table-striped
+                        %tbody
+                          %tr
+                            %td.text-center
+                              %a{href: "#"}
+                                %img{alt: "01", height: "104", src: asset_path('products/01.jpg'), title: "01", width: "80"}/
+                            %td.text-left.product-name
+                              %a{href: "#"} aliquam quaerat voluptatem
+                              .quantity.float-left.w-100
+                                %span.cart-qty 1 ×
+                                %span.text-left.price $20.00
+                            %td.text-center.close
+                              %a.close-cart
+                                %i.material-icons close
+                    %li
+                      %table.table.price.mb-30
+                        %tbody
+                          %tr
+                            %td.text-left
+                              %strong Total
+                            %td.text-right
+                              %strong $2,122.00
+                    %li.buttons.w-100.float-left
+                      %form{action: "cart_page.html"}
+                        %input.btn.pull-left.mt_10.btn-primary.btn-rounded.w-100{type: "submit", value: "View cart"}/
+                      %form{action: "checkout_page.html"}
+                        %input.btn.pull-right.mt_10.btn-primary.btn-rounded.w-100{type: "submit", value: "Checkout"}/
+        .menu
+          .container
+            / Navbar
+            %nav.navbar.navbar-expand-lg.navbar-light.d-sm-none.d-xs-none.d-lg-block.navbar-full
+              / Navbar brand
+              %a.navbar-brand.text-uppercase.d-none{href: "#"} Navbar
+              / Collapse button
+              %button.navbar-toggler{"aria-controls" => "navbarSupportedContent2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent2", "data-toggle" => "collapse", type: "button"}
+                %span.navbar-toggler-icon
+              / Collapsible content
+              .collapse.navbar-collapse
+                / Links
+                %ul.navbar-nav.m-auto.justify-content-center
+                  %li.nav-item.dropdown.mega-dropdown
+                    %a.nav-link.text-uppercase{href: "category.html"} Category
+                  %li.nav-item.dropdown
+                    %a.nav-link.text-uppercase{href: "blog-details.html"} Blog
+                  %li.nav-item.dropdown
+                    %a.nav-link.dropdown-toggle.text-uppercase more
+                    .dropdown-menu.mega-menu.v-2.z-depth-1.special-color.py-3.px-3
+                      .sub-menu
+                        %ul.list-unstyled
+                          %li
+                            %a.menu-item.pl-0{href: "about-us.html"}
+                              About us
+                          %li
+                            %a.menu-item.pl-0{href: "contact-us.html"}
+                              Contact us
+              / Collapsible content
+            / Navbar
+            %nav.navbar.navbar-expand-lg.navbar-light.d-lg-none.navbar-responsive
+              / Navbar brand
+              %a.navbar-brand.text-uppercase.d-none{href: "#"} Navbar
+              / Collapse button
+              %button.navbar-toggler{"aria-controls" => "navbarSupportedContent2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent2", "data-toggle" => "collapse", type: "button"}
+                %span.navbar-toggler-icon
+                  %i.material-icons sort
+              / Collapsible content
+              #navbarSupportedContent2.collapse.navbar-collapse
+                / Links
+                %ul.navbar-nav.m-auto.justify-content-center
+                  / Features
+                  %li.nav-item.dropdown.active
+                    %a.nav-link.dropdown-toggle.text-uppercase{"aria-controls" => "menu1", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#menu1", "data-toggle" => "collapse", href: "#"}
+                      Home
+                      %span.sr-only (current)
+                    #menu1.dropdown-menu.mega-menu.v-2.z-depth-1.special-color.py-3.px-3
+                      .sub-menu.mb-xl-0.mb-4
+                        %ul.list-unstyled
+                          %li
+                            %a.menu-item.pl-0{href: "index.html"}
+                              Home 1
+                          %li
+                            %a.menu-item.pl-0{href: "index2.html"}
+                              Home 2
+                          %li
+                            %a.menu-item.pl-0{href: "index3.html"}
+                              Home 3
+                          %li
+                            %a.menu-item.pl-0{href: "index4.html"}
+                              Home 4
+                          %li
+                            %a.menu-item.pl-0{href: "index5.html"}
+                              Home 5
+                  %li.nav-item.dropdown.mega-dropdown
+                    %a.nav-link.dropdown-toggle.text-uppercase{"aria-controls" => "menu3", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#menu3", "data-toggle" => "collapse", href: "#"} Category
+                    #menu3.dropdown-menu.mega-menu.v-2.z-depth-1.special-color.py-3.px-3
+                      .row
+                        .col-md-12.col-xl-4.sub-menu.mb-xl-0.mb-4
+                          %h6.sub-title.text-uppercase.font-weight-bold.white-text Variation 1
+                          / Featured image
+                          %ul.list-unstyled
+                            %li
+                              %a.menu-item.pl-0{href: "filter-toggle.html"}
+                                filter toggle
+                            %li
+                              %a.menu-item.pl-0{href: "off-canvas-left.html"}
+                                off canvas left
+                            %li
+                              %a.menu-item.pl-0{href: "off-canvas-right.html"}
+                                off canvas right
+                        .col-md-6.col-xl-4.sub-menu.mb-md-0.mb-4
+                          %h6.sub-title.text-uppercase.font-weight-bold.white-text Variation 2
+                          %ul.list-unstyled
+                            %li
+                              %a.menu-item.pl-0{href: "category-5-col.html"}
+                                grid 5 column
+                            %li
+                              %a.menu-item.pl-0{href: "category-6-col.html"}
+                                grid 6 column
+                            %li
+                              %a.menu-item.pl-0{href: "category-7-col.html"}
+                                grid 7 column
+                            %li
+                              %a.menu-item.pl-0{href: "category-8-col.html"}
+                                grid 8 column
+                        .col-md-6.col-xl-4.sub-menu.mb-0
+                          %ul.list-unstyled
+                            %li
+                              %span.menu-banner
+                                %img{alt: "menu-banner", height: "300", src: asset_path('banner/menu-banner.jpg'), width: "210"}/
+                  %li.nav-item.dropdown
+                    %a.nav-link.dropdown-toggle.text-uppercase{"aria-controls" => "menu2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#menu2", "data-toggle" => "collapse", href: "#"}
+                      Shop
+                      %span.sr-only (current)
+                    #menu2.dropdown-menu.mega-menu.v-2.z-depth-1.special-color.py-3.px-3
+                      .sub-menu.mb-xl-0.mb-4
+                        %h6.sub-title.text-uppercase.font-weight-bold.white-text Featured
+                        %ul.list-unstyled
+                          %li
+                            %a.menu-item.pl-0{href: "product-grid.html"}
+                              product grid
+                          %li
+                            %a.menu-item.pl-0{href: "product-sticky-right.html"}
+                              sticky right
+                          %li
+                            %a.menu-item.pl-0{href: "product-extended-layout.html"}
+                              Extended layout
+                          %li
+                            %a.menu-item.pl-0{href: "product-details.html"}
+                              Default layout
+                          %li
+                            %a.menu-item.pl-0{href: "product-compact.html"}
+                              compact layout
+                  / Technology
+                  %li.nav-item.dropdown
+                    %a.nav-link.dropdown-toggle.text-uppercase{"aria-controls" => "menu4", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#menu4", "data-toggle" => "collapse", href: "#"} Blog
+                    #menu4.dropdown-menu.mega-menu.v-2.z-depth-1.special-color.py-3.px-3
+                      .sub-menu
+                        %h6.sub-title.text-uppercase.font-weight-bold.white-text.d-none Featured
+                        %ul.list-unstyled
+                          %li
+                            %a.menu-item.pl-0{href: "blog-2-column.html"}
+                              blog 2 column
+                          %li
+                            %a.menu-item.pl-0{href: "blog-3-column.html"}
+                              blog 3 column
+                          %li
+                            %a.menu-item.pl-0{href: "blog-2-column-masonary.html"}
+                              blog masonary
+                          %li
+                            %a.menu-item.pl-0{href: "blog-list.html"}
+                              blog list
+                          %li
+                            %a.menu-item.pl-0{href: "blog-details.html"}
+                              blog details
+                  %li.nav-item.dropdown
+                    %a.nav-link.text-uppercase{href: "contact-us.html"} contact us
+                  %li.nav-item.dropdown
+                    %a.nav-link.dropdown-toggle.text-uppercase{"aria-controls" => "menu5", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#menu5", "data-toggle" => "collapse", href: "#"} Pages
+                    #menu5.dropdown-menu.mega-menu.v-2.z-depth-1.special-color.py-3.px-3
+                      .sub-menu
+                        %h6.sub-title.text-uppercase.font-weight-bold.white-text.d-none Featured
+                        %ul.list-unstyled
+                          %li
+                            %a.menu-item.pl-0{href: "about-us.html"}
+                              About us
+                          %li
+                            %a.menu-item.pl-0{href: "accordions.html"}
+                              Accordions
+                          %li
+                            %a.menu-item.pl-0{href: "buttons.html"}
+                              Buttons
+/ Register modal
+#modalRegisterForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+  .modal-dialog{role: "document"}
+    .modal-content
+      .modal-header.text-center
+        %h4.modal-title.w-100.font-weight-medium.text-left Sign up
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body.mx-3
+        .row
+          .col-sm-12
+            .row
+              .col-md-4
+                .form-group.required-field
+                  %input#acc-name.form-control{name: "acc-name", required: "", type: "text", placeholder: "First name"}/
+                / End .form-group
+              / End .col-md-4
+              .col-md-4
+                .form-group
+                  %input#acc-mname.form-control{name: "acc-mname", type: "text", placeholder: "Middle name"}/
+                / End .form-group
+              / End .col-md-4
+              .col-md-4
+                .form-group.required-field
+                  %input#acc-lastname.form-control{name: "acc-lastname", required: "", type: "text", placeholder: "Last name"}/
+        .md-form.mb-4
+          %input#RegisterForm-email.form-control.validate{placeholder: "Your email", type: "email"}/
+        .md-form.mb-4
+          %input#RegisterForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
+          .md-form.mb-4
+          %input#RegisterForm-pass.form-control.validate{placeholder: "Confirm password", type: "password"}/
+        .checkbox-link.d-flex.justify-content-between
+          .left-col
+            %input#remember-me{type: "checkbox"}/
+            %label{for: "remember_me"} Remember Me
+      .modal-footer.d-flex.justify-content-center
+        %button.btn.btn-primary Sign up
+/ Login modal
+#modalLoginForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+  .modal-dialog{role: "document"}
+    .modal-content
+      .modal-header.text-center
+        %h4.modal-title.w-100.font-weight-medium.text-left Sign in
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body.mx-3
+        .md-form.mb-4
+          %input#LoginForm-name.form-control.validate{placeholder: "Your email", type: "email"}/
+        .md-form.mb-4
+          %input#LoginForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
+        .checkbox-link.d-flex.justify-content-between
+          .left-col
+            %input#remember_me{type: "checkbox"}/
+            %label{for: "remember_me"} Remember Me
+          .right-col
+            %a{href: "#"} Forget Password?
+      .modal-footer.d-flex.justify-content-center
+        %button.btn.btn-primary Sign in

@@ -1,0 +1,27 @@
+.modal-dialog{role: "document"}
+  .modal-content
+    %h4.modal-title.w-100.font-weight-medium.text-left.modal-header Sign up
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .modal-body.mx-3
+        .row
+          .col-sm-12
+            .row
+              .col-md-6
+                .form-group.required-field
+                  = f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: 'form-control', id: 'acc-name', placeholder: "Your first name"
+              .col-md-6
+                .form-group.required-field
+                  = f.text_field :last_name, autofocus: true, autocomplete: "first_name", class: 'form-control', id: 'acc-lastname', placeholder: "Your last name"
+        .md-form.mb-4
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', id: 'RegisterForm-email', placeholder: "Your email"
+        .md-form.mb-4
+          = f.text_field :mobile, autofocus: true, autocomplete: "mobile", class: 'form-control', id: 'RegisterForm-email', placeholder: "Your mobile number"
+        .md-form.mb-4
+          = f.password_field :password, placeholder: "Your password", autocomplete: "new-password", class: 'form-control', id: 'RegisterForm-pass'
+          .md-form.mb-4
+          = f.password_field :password_confirmation, placeholder: 'Your confirm Password', autocomplete: "new-password", class: 'form-control', id: 'RegisterForm-pass'
+        .right-col
+          = link_to "Already log in?", new_session_path(resource_name)
+      .modal-footer.d-flex.justify-content-center
+        = f.submit "Sign up", class: 'btn btn-primary'

@@ -1,0 +1,132 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Fashion Template for Bootstrap
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %link{href: "img/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900", rel: "stylesheet"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Poppins:400,500,700,900", rel: "stylesheet"}/
+    %link{href: "https://fonts.googleapis.com/icon?family=Material+Icons", rel: "stylesheet"}/
+    / Bootstrap core CSS
+    %link{href: "vendor/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
+    / Bootstrap core CSS
+    %link{href: "css/styles.css", rel: "stylesheet"}/
+    %link{href: "css/animate.css", rel: "stylesheet"}/
+    %link{href: "css/owl-carousel.css", rel: "stylesheet"}/
+    %link{href: "css/lightbox.css", rel: "stylesheet"}/
+    / Custom styles for this template
+  %body
+    %nav.w-100.float-left{"aria-label" => "breadcrumb"}
+      %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => "img/banner/parallax.jpg", style: "background-image: url(\"img/banner/parallax.jpg\"); background-position: 50% 0.809717%;"}
+        %li.breadcrumb-item
+          %a{href: "#"} Home
+        %li.breadcrumb-item.active{"aria-current" => "page"} my-account
+    .main-content.w-100.float-left.blog-list
+      .container
+        .row
+          .products-grid.col-xl-9.col-lg-8.order-lg-2
+            .row
+              .col-lg-12.order-lg-last.account-content
+                %h4 Edit Account Information
+                %form.myacoount-form{action: "#"}
+                  .row
+                    .col-sm-12
+                      .row
+                        .col-md-4
+                          .form-group.required-field
+                            %label{for: "acc-name"}
+                              First Name
+                              %span.required *
+                            %input#acc-name.form-control{name: "acc-name", required: "", type: "text"}/
+                          / End .form-group
+                        / End .col-md-4
+                        .col-md-4
+                          .form-group
+                            %label{for: "acc-mname"}
+                              Middle Name
+                              %span.required *
+                            %input#acc-mname.form-control{name: "acc-mname", type: "text"}/
+                          / End .form-group
+                        / End .col-md-4
+                        .col-md-4
+                          .form-group.required-field
+                            %label{for: "acc-lastname"}
+                              Last Name
+                              %span.required *
+                            %input#acc-lastname.form-control{name: "acc-lastname", required: "", type: "text"}/
+                          / End .form-group
+                        / End .col-md-4
+                      / End .row
+                    / End .col-sm-11
+                  / End .row
+                  .form-group.required-field
+                    %label{for: "acc-email"} Email
+                    %input#acc-email.form-control{name: "acc-email", required: "", type: "email"}/
+                  / End .form-group
+                  .form-group.required-field
+                    %label{for: "account-password"} Password
+                    %input#account-password.form-control{name: "account-password", required: "", type: "password"}/
+                  / End .form-group
+                  .custom-control.custom-checkbox
+                    %input#change-password-checkbox.custom-control-input{type: "checkbox", value: "1"}/
+                    %label.custom-control-label{for: "change-password-checkbox"} Change Password
+                  / End .custom-checkbox
+                  #account-change-password
+                    %h4 Change Password
+                    .row
+                      .col-md-6
+                        .form-group.required-field
+                          %label{for: "account-pass2"} Password
+                          %input#account-pass2.form-control{name: "account-pass2", type: "password"}/
+                        / End .form-group
+                      / End .col-md-6
+                      .col-md-6
+                        .form-group.required-field
+                          %label{for: "account-pass3"} Confirm Password
+                          %input#account-pass3.form-control{name: "account-pass3", type: "password"}/
+                        / End .form-group
+                      / End .col-md-6
+                    / End .row
+                  / End #account-chage-pass
+                  .required.text-right * Required Field
+                  .form-footer.d-flex.justify-content-between.align-items-center
+                    %a{href: "#"}
+                      %i.material-icons> navigate_before
+                      Back
+                    .form-footer-right
+                      %button.btn.btn-primary.btn-primary{type: "submit"} Save
+                  / End .form-footer
+    /
+      Bootstrap core JavaScript
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    %script{src: "js/jquery.min.js"}
+    %script{src: "js/bootstrap.min.js"}
+    %script{src: "js/owl.carousel.min.js"}
+    %script{src: "js/custom.js"}
+    %script{src: "js/parallax.js"}
+    %script{src: "js/lightbox-2.6.min.js"}
+    %script{src: "js/ResizeSensor.min.js"}
+    %script{src: "js/theia-sticky-sidebar.min.js"}
+    %script{src: "js/inview.js"}
+    %script{src: "js/cookiealert.js"}
+    %script{src: "js/jquery.countdown.min.js"}
+    %script{src: "js/masonry.pkgd.min.js"}
+    %script{src: "js/imagesloaded.pkgd.min.js"}
+    %script{src: "js/jquery.zoom.min.js"}
+    / Start of Tawk.to Script
+    :javascript
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5ac1aabb4b401e45400e4197/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+    / End of Tawk.to Script

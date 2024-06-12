@@ -1,0 +1,21 @@
+%h1 Listing order_products
+
+%table
+  %thead
+    %tr
+      %th Quantity
+      %th
+      %th
+      %th
+
+  %tbody
+    - @order_products.each do |order_product|
+      %tr
+        %td= order_product.quantity
+        %td= link_to 'Show', order_product
+        %td= link_to 'Edit', edit_order_product_path(order_product)
+        %td= link_to 'Destroy', order_product, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Order product', new_order_product_path
