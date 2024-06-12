@@ -3026,17 +3026,6 @@ input[type="radio"] {
   height: auto;
 }
 
-.ttloading-bg {
-  background: #ffffff url("../img/banner/ajax-loader.gif") no-repeat scroll
-    center center;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-}
-
 .tt-toggle {
   background: #f5f5f5;
   padding: 12px 20px;
