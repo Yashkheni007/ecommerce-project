@@ -3027,8 +3027,6 @@ input[type="radio"] {
 }
 
 .ttloading-bg {
-  background: #ffffff url("../img/banner/ajax-loader.gif") no-repeat scroll
-    center center;
   height: 100%;
   left: 0;
   position: fixed;
