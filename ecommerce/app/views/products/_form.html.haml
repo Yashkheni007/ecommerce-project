@@ -5,7 +5,9 @@
       %ul
         - @product.errors.full_messages.each do |message|
           %li= message
-
+  .field
+    = f.label :category
+    = f.collection_select :category_id, Category.all, :id, :name, prompt: "Select a Category"
   .field
     = f.label :description
     = f.text_field :description
@@ -14,7 +16,7 @@
     = f.text_field :price
   .field
     = f.label :image
-    = f.text_field :image
+    = f.file_field :image
   .field
     = f.label :name
     = f.text_field :name

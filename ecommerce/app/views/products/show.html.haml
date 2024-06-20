@@ -8,7 +8,8 @@
   = @product.price
 %p
   %b Image:
-  = @product.image
+  - if @product.image.attached?
+    = image_tag @product.image
 %p
   %b Name:
   = @product.name

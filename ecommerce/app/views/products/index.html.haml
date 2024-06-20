@@ -1,29 +1,107 @@
-%h1 Listing products
+-# %body
+-#   - @products.each do |product|
+-#     %tr
+-#       %td= product.description
+-#       %td= product.price
+-#       %td= image_tag product.image
+-#       %td= product.name
+-#       %td= product.size
+-#       %td= link_to 'Show', product
+-#       %td= link_to 'Edit', edit_product_path(product)
+-#       %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
 
-%table
-  %thead
-    %tr
-      %th Description
-      %th Price
-      %th Image
-      %th Name
-      %th Size
-      %th
-      %th
-      %th
+-# %br
 
-  %tbody
-    - @products.each do |product|
-      %tr
-        %td= product.description
-        %td= product.price
-        %td= product.image
-        %td= product.name
-        %td= product.size
-        %td= link_to 'Show', product
-        %td= link_to 'Edit', edit_product_path(product)
-        %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+-# = link_to 'New Product', new_product_path
 
-%br
 
-= link_to 'New Product', new_product_path
+%body#category.category
+  %nav.w-100.float-left{"aria-label" => "breadcrumb"}
+    %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => asset_path('banner/parallax.jpg'), style:"background-image: url('#{asset_path('banner/parallax.jpg')}'); background-position: 50% 0.809717%;"}
+      %li.breadcrumb-item
+        = link_to root_path do
+          Home
+      %li.breadcrumb-item.active{"aria-current" => "page"} category
+  .main-content.w-100.float-left
+    .container
+      .row
+        .content-wrapper.col-xl-9.col-lg-9.order-lg-2
+          .block-category.mb-30.w-100.float-left
+            .category-cover
+              %img{alt: "category-banner", src: asset_path('banner/category-banner.png')}/
+            .title-category.text-capitalize women
+            .category-description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sagittis, magna et euismod auctor,mauris ipsum interdum risus, a varius augue lacus id diam. Mauris maximus, ipsum at gravida sodales, purus tellustempor eros, a feugiat elit odio in nunc.
+          .tab-content.text-center.products.w-100.float-left
+            #grid.tab-pane.grid.fade.active{role: "tabpanel"}
+              .row
+                - @products.each do |product|
+                  .product-layouts.col-lg-3.col-md-3.col-sm-6.col-xs-6
+                    .product-thumb
+                      .image.zoom
+                        %a{href: "product-details.html"}
+                          = image_tag product.image, alt: product.name
+                          = image_tag product.image, alt: product.name, class: "second_image img-responsive"
+                      .thumb-description
+                        .caption
+                          %h4.product-title.text-capitalize
+                            %a{href: "product-details.html"} #{product.name}
+                        .rating
+                          .product-ratings.d-inline-block.align-middle
+                            %span.fa.fa-stack
+                              %i.material-icons star
+                            %span.fa.fa-stack
+                              %i.material-icons star
+                            %span.fa.fa-stack
+                              %i.material-icons star
+                            %span.fa.fa-stack
+                              %i.material-icons.off star
+                            %span.fa.fa-stack
+                              %i.material-icons.off star
+                        .price
+                          .regular-price #{product.price}
+                        .button-wrapper
+                          .button-group.text-center
+                            %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                              %i.material-icons shopping_cart
+                              %span Out of stock
+                            %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                              %i.material-icons favorite
+                              %span wishlist
+                            %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type:"button"}
+                              %i.material-icons visibility
+                              %span Quick View
+        .left-column.sidebar.col-xl-3.col-lg-3.order-lg-1
+          .sidebar-filter.left-sidebar.w-100.float-left
+            .title
+              %a.d-lg-none.block-toggler{"aria-controls" => "sidebar-main", "aria-expanded" => "false", "data-toggle" =>"collapse", href: "#sidebar-main"} Product Categories
+            #sidebar-main.sidebar-main.collapse
+              .sidebar-block.categories
+                %h3.widget-title
+                  %a{"aria-controls" => "categoriesMenu", "aria-expanded" => "true", "data-toggle" => "collapse", href:"#categoriesMenu", role: "button"} Categories
+                #categoriesMenu.expand-lg.collapse.show
+                  .nav.nav-pills.flex-column.mt-4
+                    %a.nav-link.d-flex.justify-content-between.mb-2{href: "#"}
+                      %span Men
+                    %a.nav-link.d-flex.justify-content-between.mb-2.active{href: "#"}
+                      %span Women
+              .sidebar-block.size
+                %h3.widget-title
+                  %a{"aria-controls" => "size", "aria-expanded" => "true", "data-toggle" => "collapse", href: "#size", role:"button"} Size
+                #size.sidebar-widget-option-wrapper.collapse.show
+                  .size-inner
+                    .sidebar-widget-option
+                      %input#size-1{type: "checkbox"}/
+                      %label{for: "size-1"}
+                        S
+                    .sidebar-widget-option
+                      %input#size-2{type: "checkbox"}/
+                      %label{for: "size-2"}
+                        M
+                    .sidebar-widget-option
+                      %input#size-3{type: "checkbox"}/
+                      %label{for: "size-3"}
+                        L
+          .sidebar-left-banner.left-sidebar.w-100.float-left
+            .ttleftbanner
+              %a{href: "#"}
+                %img{alt: "left-banner", src: asset_path('banner/left-banner.jpg')}/
