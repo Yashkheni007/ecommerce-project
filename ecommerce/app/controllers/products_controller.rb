@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
+    @product = Product.find(params[:id])
+    @products = Product.where(category_id: @product.category_id).where.not(id: @product.id).limit(4)
   end
 
   # GET /products/new

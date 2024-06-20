@@ -1,22 +1,163 @@
-%p#notice= notice
-
-%p
-  %b Description:
-  = @product.description
-%p
-  %b Price:
-  = @product.price
-%p
-  %b Image:
-  - if @product.image.attached?
-    = image_tag @product.image
-%p
-  %b Name:
-  = @product.name
-%p
-  %b Size:
-  = @product.size
-
-= link_to 'Edit', edit_product_path(@product)
-\|
-= link_to 'Back', products_path
+%body#product
+  %nav.w-100.float-left{"aria-label" => "breadcrumb"}
+    %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => asset_path('banner/parallax.jpg'), style: "background-image: url('#{asset_path('banner/parallax.jpg')}'); background-position: 50% 0.809717%;"}
+      %li.breadcrumb-item
+        = link_to root_path do
+          Home
+      %li.breadcrumb-item.active{"aria-current" => "page"} Shop
+  .product-deatils-section.float-left.w-100
+    .container
+      .row
+        .left-columm.col-lg-5.col-md-5
+          .product-large-image.tab-content
+            #product-01.tab-pane.active{"aria-labelledby" => "product-tab-01", role: "tabpanel"}
+              .single-img.img-full
+                - if @product.image.attached?
+                  = image_tag @product.image
+        .right-columm.col-lg-7.col-md-7
+          .product-information
+            %h4.product-title.text-capitalize.float-left.w-100
+              %a.float-left.w-100{href: "product-details.html"}
+              = @product.name
+            .description
+              = @product.description
+            .rating
+              .product-ratings.d-inline-block.align-middle
+                %span.fa.fa-stack
+                  %i.material-icons star
+                %span.fa.fa-stack
+                  %i.material-icons star
+                %span.fa.fa-stack
+                  %i.material-icons star
+                %span.fa.fa-stack
+                  %i.material-icons.off star
+                %span.fa.fa-stack
+                  %i.material-icons.off star
+              %a.review-down{href: "#"} (customer reviews)
+            .price.float-left.w-100.d-flex
+              .regular-price
+                = @product.price
+            .product-variants.float-left.w-100
+              .col-md-3.col-sm-6.col-xs-12.size-options.d-flex.align-items-center
+                %h5 Size:
+                = @product.size
+            .btn-cart.d-flex.align-items-center.float-left.w-100
+              %h5 qty:
+              %input{type: "number", value: "1"}/
+              %button.btn.btn-primary.btn-cart.m-0{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                %i.material-icons shopping_cart
+                Add To Cart
+            .tt-links.d-flex.align-items-center.float-left.w-100.mb-15
+              %a.link.btn-wishlist{href: "wishlist.html"}
+                %i.material-icons favorite
+                %span wishlist
+  .product-tab-area.float-left.w-100
+    .container
+      .tabs
+        %ul.nav.nav-tabs.justify-content-start
+          %li.nav-item
+            %a#tab1.nav-link.active{"data-toggle" => "tab", href: "#product-tab1"}
+              .tab-title Description
+          %li.nav-item
+            %a#tab2.nav-link{"data-toggle" => "tab", href: "#product-tab2"}
+              .tab-title Reviews (2)
+      .tab-content.float-left.w-100
+        #product-tab1.tab-pane.active{"aria-labelledby" => "tab1", role: "tabpanel"}
+          .description
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis viverra purus, non viverra nulla. Sed vehicula libero eu lectus eleifend volutpat. Sed et placerat arcu. Proin mi leo, interdum eu tortor at, euismod gravida velit. Fusce non enim lectus. Duis euismod, lorem vitae pharetra rhoncus, ligula risus elementum nunc, at interdum eros nunc eget augue. Donec dapibus nec diam ut tempor. Duis malesuada neque turpis, ut congue ipsum euismod eget. Sed egestas ipsum enim, sed semper magna auctor non. Praesent risus nunc, ultricies vel velit nec, fringilla venenatis sem. Nunc condimentum, elit sed posuere accumsan, mauris nisl ornare metus, nec hendrerit quam velit ut nibh. Vivamus sodales neque vel sodales porta. Mauris hendrerit felis in mi auctor posuere. Mauris a consequat sapien, eget condimentum risus. Curabitur iaculis lorem non pretium varius. In hac habitasse platea dictumst.
+        #product-tab2.tab-pane{"aria-labelledby" => "tab2", role: "tabpanel"}
+          .reviews-tab.float-left.w-100
+            .ttreview-tab.float-left.w-100.p-30
+              %h2 Customer Reviews
+              .rating.float-left.w-100
+                .product-ratings.d-inline-block.align-middle
+                  %span.fa.fa-stack
+                    %i.material-icons star
+                  %span.fa.fa-stack
+                    %i.material-icons star
+                  %span.fa.fa-stack
+                    %i.material-icons star
+                  %span.fa.fa-stack
+                    %i.material-icons.off star
+                  %span.fa.fa-stack
+                    %i.material-icons.off star
+              .review-title.float-left.w-100
+                %span.user admin
+                %span.date – February 14, 2019
+              .review-desc.float-left.w-100 Aliquam at ipsum tellus. Donec arcu est, posuere quis orci vel, commodo cursus augue.
+            %form.rating-form.float-left.w-100{action: "#"}
+              %h5 Add your rating
+              .rating
+                .rating-stars.text-left
+                  %ul#stars
+                    %li.star{"data-value" => "1", title: "Poor"}
+                      %i.material-icons star
+                    %li.star{"data-value" => "2", title: "Fair"}
+                      %i.material-icons star
+                    %li.star{"data-value" => "3", title: "Good"}
+                      %i.material-icons star
+                    %li.star{"data-value" => "4", title: "Excellent"}
+                      %i.material-icons star
+                    %li.star{"data-value" => "5", title: "WOW!!!"}
+                      %i.material-icons star
+                .success-box
+                  .clearfix
+                  .text-message.text-success
+                  .clearfix
+              .row.d-block
+                .col-sm-6.float-left.form-group
+                  %label
+                    Name
+                    %span.required *
+                  %input{placeholder: "", required: "", type: "text"}/
+                .col-sm-6.float-left.form-group
+                  %label
+                    Email
+                    %span.required *
+                  %input#r-email{placeholder: "", required: "", type: "email"}/
+                .col-sm-12.float-left.form-group
+                  %label{for: "r-textarea"} Your Review
+                  %textarea#r-textarea.w-100{cols: "30", name: "review", rows: "10"}
+              %input.btn.btn-primary.submit{type: "submit", value: "Submit Review"}/
+  #product-accessories.product-accessories.my-40.w-100.float-left
+    .container
+      .row
+        .tt-title.d-inline-block.float-none.w-100.text-center You might also like
+        .product-accessories-content.products.grid.owl-carousel
+          - if @products.present?
+            - @products.each do |product|
+              .product-layouts
+                .product-thumb
+                  .image.zoom
+                    %a{href: product_path(product)}
+                      = image_tag product.image, alt: product.name
+                      = image_tag product.image, alt: product.name, class: "second_image img-responsive"
+                  .thumb-description
+                    .caption
+                      %h4.product-title.text-capitalize
+                        %a{href: product_path(product)} #{product.name}
+                    .rating
+                      .product-ratings.d-inline-block.align-middle
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                        %span.fa.fa-stack
+                          %i.material-icons.off star
+                    .price
+                      .regular-price #{product.price}
+                    .button-wrapper
+                      .button-group.text-center
+                        %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons shopping_cart
+                          %span Add to cart
+                        %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+                          %i.material-icons favorite
+                          %span wishlist
+                        %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+                          %i.material-icons visibility
+                          %span Quick View
