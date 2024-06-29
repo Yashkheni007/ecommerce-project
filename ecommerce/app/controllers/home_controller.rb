@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @products = Product.all
   end
   def my_account
 
