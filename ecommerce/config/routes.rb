@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/wishlist.html', to: 'wishlists#index', as: 'user_wishlist'
   get '/blog-details.html', to: 'home#blog-details', as: 'blog-details'
   get '/about-us.html', to: 'home#about-us', as: 'about-us'
-  get '/category.html', to: 'home#category', as: 'user_category'
+  get '/products', to: 'products#index', as: 'user_products'
   get '/product-details.html', to: 'home#product-details', as: 'product-details'
 
 end
