@@ -1,176 +1,136 @@
-!!!
-%html{lang: "en"}
-  %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Fasion Template for Bootstrap
-    %meta{charset: "utf-8"}/
-    %meta{content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
-    %meta{content: "", name: "description"}/
-    %meta{content: "", name: "author"}/
-    %link{href: "img/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
-    %link{href: "https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900", rel: "stylesheet"}/
-    %link{href: "https://fonts.googleapis.com/css?family=Poppins:400,500,700,900", rel: "stylesheet"}/
-    %link{href: "https://fonts.googleapis.com/icon?family=Material+Icons", rel: "stylesheet"}/
-    / Bootstrap core CSS
-    %link{href: "vendor/bootstrap/css/bootstrap.css", rel: "stylesheet"}/
-    / Bootstrap core CSS
-    %link{href: "css/styles.css", rel: "stylesheet"}/
-    %link{href: "css/animate.css", rel: "stylesheet"}/
-    %link{href: "css/owl-carousel.css", rel: "stylesheet"}/
-    %link{href: "css/lightbox.css", rel: "stylesheet"}/
-    / Custom styles for this template
-  %body
-    %nav.w-100.float-left{"aria-label" => "breadcrumb"}
-      %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => asset_path('banner/parallax.jpg'), style: "background-image: url('#{asset_path('banner/parallax.jpg')}'); background-position: 50% 0.809717%;"}
-        %li.breadcrumb-item
-          = link_to root_path do
-            Home
-        %li.breadcrumb-item.active{"aria-current" => "page"} order-confirmation
-    .order-inner.float-left.w-100
-      .container
-        .row
-          #order-confirmation.card.float-left.w-100.mb-10
-            .card-block.p-20
-              %h3.card-title.text-success Your order is confirmed
-              %p An email has been sent to your mail address admin7890@gmail.com.
-          #order-itens.card.float-left.w-100.mb-10
-            .card-block.p-20
-              %h3.card-title order items
-              .order-confirmation-table.float-left.w-100
-                .order-line.float-left.w-100
-                  .row
-                    .col-sm-1.col-xs-3.float-left
-                      %img{alt: "", src: "img/products/02.jpg"}/
-                    .col-sm-5.col-xs-9.details.float-left
-                      %span aspetur autodit autfugit
-                    .col-sm-6.col-xs-12.qty.float-left.d-flex
-                      .col-xs-5.col-sm-5.text-sm-right.text-xs-left $100.00
-                      .col-xs-2.col-sm-2 1
-                      .col-xs-5.col-sm-5.text-sm-right.bold $100.00
-                %hr.float-left.w-100/
-                %table.float-left.w-100.mb-30
-                  %tbody
-                    %tr.mb-10
-                      %td Subtotal
-                      %td.text-right $100.00
-                    %tr.mb-10
-                      %td Shipping and handling
-                      %td.text-right $7.00
-                    %tr.font-weight-bold
-                      %td
-                        %span.text-uppercase Total
-                        (tax excl.)
-                      %td.text-right $107.00
-                #order-details.float-left.w-100
-                  %h3.h3.card-title Order details:
-                  %ul
-                    %li Order reference: ZSMQIPYEH
-                    %li Payment method: Bank transfer
-                    %li
-                      Shipping method: Demo Store
-                      %br/
-                      %em Pick up in-store
-          #content-hook_payment_return.card.definition-list.float-left.w-100
-            .card-block.p-20
-              .row
-                .col-md-12
-                  %p
-                    Your order on Demo Store is complete.
+%body
+  %nav.w-100.float-left{"aria-label" => "breadcrumb"}
+    %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => asset_path('banner/parallax.jpg'), style: "background-image: url('#{asset_path('banner/parallax.jpg')}'); background-position: 50% 0.809717%;"}
+      %li.breadcrumb-item
+        = link_to root_path do
+          Home
+      %li.breadcrumb-item.active{"aria-current" => "page"} order-confirmation
+  .order-inner.float-left.w-100
+    .container
+      .row
+        #order-confirmation.card.float-left.w-100.mb-10
+          .card-block.p-20
+            %h3.card-title.text-success Your order is confirmed
+            %p An email has been sent to your mail address admin7890@gmail.com.
+        #order-itens.card.float-left.w-100.mb-10
+          .card-block.p-20
+            %h3.card-title order items
+            .order-confirmation-table.float-left.w-100
+              .order-line.float-left.w-100
+                .row
+                  .col-sm-1.col-xs-3.float-left
+                    %img{alt: "", src: "img/products/02.jpg"}/
+                  .col-sm-5.col-xs-9.details.float-left
+                    %span aspetur autodit autfugit
+                  .col-sm-6.col-xs-12.qty.float-left.d-flex
+                    .col-xs-5.col-sm-5.text-sm-right.text-xs-left $100.00
+                    .col-xs-2.col-sm-2 1
+                    .col-xs-5.col-sm-5.text-sm-right.bold $100.00
+              %hr.float-left.w-100/
+              %table.float-left.w-100.mb-30
+                %tbody
+                  %tr.mb-10
+                    %td Subtotal
+                    %td.text-right $100.00
+                  %tr.mb-10
+                    %td Shipping and handling
+                    %td.text-right $7.00
+                  %tr.font-weight-bold
+                    %td
+                      %span.text-uppercase Total
+                      (tax excl.)
+                    %td.text-right $107.00
+              #order-details.float-left.w-100
+                %h3.h3.card-title Order details:
+                %ul
+                  %li Order reference: ZSMQIPYEH
+                  %li Payment method: Bank transfer
+                  %li
+                    Shipping method: Demo Store
                     %br/
-                    Please send us a bank wire with:
-                  .order-content-main
-                    .order-content.mb-10
-                      %div Amount
-                      %div $107.00
-                    .order-content.mb-10
-                      %div Name of account owner
-                      %div ___________
-                    .order-content.mb-10
-                      %div Please include these details
-                      %div ___________
-                    .order-content.mb-10
-                      %div Bank name
-                      %div ___________
-                  %p
-                    Please specify your order reference ZSMQIPYEH in the bankwire description.
-                    %br/
-                    We've also sent you this information by e-mail.
-                  %strong Your order will be sent as soon as we receive payment.
-                  %p
-                    If you have questions, comments or concerns, please contact our
-                    %strong
-                      %a{href: "contact-us.html"} expert customer support team
-    / Register modal
-    #modalRegisterForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
-      .modal-dialog{role: "document"}
-        .modal-content
-          .modal-header.text-center
-            %h4.modal-title.w-100.font-weight-medium.text-left Sign up
-            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
-              %span{"aria-hidden" => "true"} ×
-          .modal-body.mx-3
-            .md-form.mb-4
-              %input#RegisterForm-name.form-control.validate{placeholder: "Your name", type: "text"}/
-            .md-form.mb-4
-              %input#RegisterForm-email.form-control.validate{placeholder: "Your email", type: "email"}/
-            .md-form.mb-4
-              %input#RegisterForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
-            .checkbox-link.d-flex.justify-content-between
-              .left-col
-                %input#remember-me{type: "checkbox"}/
-                %label{for: "remember_me"} Remember Me
-              .right-col
-                %a{href: "#"} Forget Password?
-          .modal-footer.d-flex.justify-content-center
-            %button.btn.btn-primary Sign up
-    / Login modal
-    #modalLoginForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
-      .modal-dialog{role: "document"}
-        .modal-content
-          .modal-header.text-center
-            %h4.modal-title.w-100.font-weight-medium.text-left Sign in
-            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
-              %span{"aria-hidden" => "true"} ×
-          .modal-body.mx-3
-            .md-form.mb-4
-              %input#LoginForm-name.form-control.validate{placeholder: "Your name", type: "text"}/
-            .md-form.mb-4
-              %input#LoginForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
-            .checkbox-link.d-flex.justify-content-between
-              .left-col
-                %input#remember_me{type: "checkbox"}/
-                %label{for: "remember_me"} Remember Me
-              .right-col
-                %a{href: "#"} Forget Password?
-          .modal-footer.d-flex.justify-content-center
-            %button.btn.btn-primary Sign in
-    /
-      Bootstrap core JavaScript
-      \==================================================
-    / Placed at the end of the document so the pages load faster
-    %script{src: "js/jquery.min.js"}
-    %script{src: "js/bootstrap.min.js"}
-    %script{src: "js/owl.carousel.min.js"}
-    %script{src: "js/custom.js"}
-    %script{src: "js/parallax.js"}
-    %script{src: "js/lightbox-2.6.min.js"}
-    %script{src: "js/ResizeSensor.min.js"}
-    %script{src: "js/theia-sticky-sidebar.min.js"}
-    %script{src: "js/inview.js"}
-    %script{src: "js/cookiealert.js"}
-    %script{src: "js/jquery.countdown.min.js"}
-    %script{src: "js/masonry.pkgd.min.js"}
-    %script{src: "js/imagesloaded.pkgd.min.js"}
-    %script{src: "js/jquery.zoom.min.js"}
-    / Start of Tawk.to Script
-    :javascript
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/5ac1aabb4b401e45400e4197/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-    / End of Tawk.to Script
+                    %em Pick up in-store
+        #content-hook_payment_return.card.definition-list.float-left.w-100
+          .card-block.p-20
+            .row
+              .col-md-12
+                %p
+                  Your order on Demo Store is complete.
+                  %br/
+                  Please send us a bank wire with:
+                .order-content-main
+                  .order-content.mb-10
+                    %div Amount
+                    %div $107.00
+                  .order-content.mb-10
+                    %div Name of account owner
+                    %div ___________
+                  .order-content.mb-10
+                    %div Please include these details
+                    %div ___________
+                  .order-content.mb-10
+                    %div Bank name
+                    %div ___________
+                %p
+                  Please specify your order reference ZSMQIPYEH in the bankwire description.
+                  %br/
+                  We've also sent you this information by e-mail.
+                %strong Your order will be sent as soon as we receive payment.
+                %p
+                  If you have questions, comments or concerns, please contact our
+                  %strong
+                    %a{href: "contact-us.html"} expert customer support team
+  / Register modal
+  #modalRegisterForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+    .modal-dialog{role: "document"}
+      .modal-content
+        .modal-header.text-center
+          %h4.modal-title.w-100.font-weight-medium.text-left Sign up
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+            %span{"aria-hidden" => "true"} ×
+        .modal-body.mx-3
+          .md-form.mb-4
+            %input#RegisterForm-name.form-control.validate{placeholder: "Your name", type: "text"}/
+          .md-form.mb-4
+            %input#RegisterForm-email.form-control.validate{placeholder: "Your email", type: "email"}/
+          .md-form.mb-4
+            %input#RegisterForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
+          .checkbox-link.d-flex.justify-content-between
+            .left-col
+              %input#remember-me{type: "checkbox"}/
+              %label{for: "remember_me"} Remember Me
+            .right-col
+              %a{href: "#"} Forget Password?
+        .modal-footer.d-flex.justify-content-center
+          %button.btn.btn-primary Sign up
+  / Login modal
+  #modalLoginForm.modal.fade{"aria-hidden" => "true", role: "dialog", tabindex: "-1"}
+    .modal-dialog{role: "document"}
+      .modal-content
+        .modal-header.text-center
+          %h4.modal-title.w-100.font-weight-medium.text-left Sign in
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", type: "button"}
+            %span{"aria-hidden" => "true"} ×
+        .modal-body.mx-3
+          .md-form.mb-4
+            %input#LoginForm-name.form-control.validate{placeholder: "Your name", type: "text"}/
+          .md-form.mb-4
+            %input#LoginForm-pass.form-control.validate{placeholder: "Your password", type: "password"}/
+          .checkbox-link.d-flex.justify-content-between
+            .left-col
+              %input#remember_me{type: "checkbox"}/
+              %label{for: "remember_me"} Remember Me
+            .right-col
+              %a{href: "#"} Forget Password?
+        .modal-footer.d-flex.justify-content-center
+          %button.btn.btn-primary Sign in
+  :javascript
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5ac1aabb4b401e45400e4197/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  / End of Tawk.to Script

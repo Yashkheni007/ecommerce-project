@@ -1,388 +1,388 @@
-%body#product
-  %nav.w-100.float-left{"aria-label" => "breadcrumb"}
-    %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => asset_path('banner/parallax.jpg'), style: "background-image: url('#{asset_path('banner/parallax.jpg')}'); background-position: 50% 0.809717%;"}
-      %li.breadcrumb-item
-        = link_to root_path do
-          Home
-      %li.breadcrumb-item.active{"aria-current" => "page"} Shop
+-# %body#product
+-#   %nav.w-100.float-left{"aria-label" => "breadcrumb"}
+-#     %ol.breadcrumb.parallax.justify-content-center{"data-source-url" => asset_path('banner/parallax.jpg'), style: "background-image: url('#{asset_path('banner/parallax.jpg')}'); background-position: 50% 0.809717%;"}
+-#       %li.breadcrumb-item
+-#         = link_to root_path do
+-#           Home
+-#       %li.breadcrumb-item.active{"aria-current" => "page"} Shop
 
-  .product-deatils-section.float-left.w-100
-    .container
-      .row
-        .left-columm.col-lg-5.col-md-5
-          .product-large-image.tab-content
-            #product-01.tab-pane.active{"aria-labelledby" => "product-tab-01", role: "tabpanel"}
-              .single-img.img-full
-                %a{href: "img/products/01.jpg"}
-                  %img.img-fluid.zoomImg{alt: "", src: asset_path('products/01.jpg')}/
-            #product-02.tab-pane{"aria-labelledby" => "product-tab-02", role: "tabpanel"}
-              .single-img
-                %a{href: "img/products/02.jpg"}
-                  %img.img-fluid{alt: "", src: asset_path('products/02.jpg')}/
-            #product-03.tab-pane{"aria-labelledby" => "product-tab-03", role: "tabpanel"}
-              .single-img
-                %a{href: "img/products/03.jpg"}
-                  %img.img-fluid{alt: "", src: asset_path('products/03.jpg')}/
-            #product-04.tab-pane{"aria-labelledby" => "product-tab-04", role: "tabpanel"}
-              .single-img
-                %a{href: "img/products/04.jpg"}
-                  %img.img-fluid{alt: "", src: asset_path('products/04.jpg')}/
-            #product-05.tab-pane{"aria-labelledby" => "product-tab-05", role: "tabpanel"}
-              .single-img
-                %a{href: "img/products/05.jpg"}
-                  %img.img-fluid{alt: "", src: asset_path('products/05.jpg')}/
-          .default.small-image-list.float-left.w-100
-            .nav-add.small-image-slider-single-product-tabstyle-3.owl-carousel{role: "tablist"}
-              .single-small-image.img-full
-                %a#product-tab-01.img.active{"data-toggle" => "tab", href: "#product-01"}
-                  %img.img-fluid{alt: "", src: asset_path('products/01.jpg')}/
-              .single-small-image.img-full
-                %a#product-tab-02.img{"data-toggle" => "tab", href: "#product-02"}
-                  %img.img-fluid{alt: "", src: asset_path('products/02.jpg')}/
-              .single-small-image.img-full
-                %a#product-tab-03.img{"data-toggle" => "tab", href: "#product-03"}
-                  %img.img-fluid{alt: "", src: asset_path('products/03.jpg')}/
-              .single-small-image.img-full
-                %a#product-tab-04.img{"data-toggle" => "tab", href: "#product-04"}
-                  %img.img-fluid{alt: "", src: asset_path('products/04.jpg')}/
-              .single-small-image.img-full
-                %a#product-tab-05.img{"data-toggle" => "tab", href: "#product-05"}
-                  %img.img-fluid{alt: "", src: asset_path('products/05.jpg')}/
-        .right-columm.col-lg-7.col-md-7
-          .product-information
-            %h4.product-title.text-capitalize.float-left.w-100
-              %a.float-left.w-100{href: "product-details.html"} aliquam quaerat voluptatem
-            .description
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis viverra purus, non viverra nulla. Sed vehicula libero eu lectus eleifend volutpat. Sed et placerat arcu. Proin mi leo, interdum eu tortor at, euismod gravida velit. Fusce non enim lectus. Duis euismod, lorem vitae pharetra rhoncus, ligula risus elementum nunc, at interdum eros nunc eget augue. Donec dapibus nec diam ut tempor. Duis malesuada neque turpis, ut congue ipsum euismod eget. Sed egestas ipsum enim, sed semper magna auctor non.
-            .rating
-              .product-ratings.d-inline-block.align-middle
-                %span.fa.fa-stack
-                  %i.material-icons star
-                %span.fa.fa-stack
-                  %i.material-icons star
-                %span.fa.fa-stack
-                  %i.material-icons star
-                %span.fa.fa-stack
-                  %i.material-icons.off star
-                %span.fa.fa-stack
-                  %i.material-icons.off star
-              %a.review-down{href: "#"} (customer reviews)
-            .price.float-left.w-100.d-flex
-              .regular-price $100.00
-              .old-price $150.00
-            .product-variants.float-left.w-100
-              .col-md-3.col-sm-6.col-xs-12.size-options.d-flex.align-items-center
-                %h5 Size:
-                %select.form-control{name: "select"}
-                  %option{selected: "selected", value: ""} Size
-                  %option{value: "black"} Medium
-                  %option{value: "white"} Large
-                  %option{value: "gold"} Small
-              .color-option.d-flex.align-items-center
-                %h5 color :
-                %ul.color-categories
-                  %li.active
-                    %a.tt-pink{href: "#", title: "Pink"}
-                  %li
-                    %a.tt-blue{href: "#", title: "Blue"}
-                  %li
-                    %a.tt-yellow{href: "#", title: "Yellow"}
-            .btn-cart.d-flex.align-items-center.float-left.w-100
-              %h5 qty:
-              %input{type: "number", value: "1"}/
-              %button.btn.btn-primary.btn-cart.m-0{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
-                %i.material-icons shopping_cart
-                Add To Cart
-            .tt-links.d-flex.align-items-center.float-left.w-100.mb-15
-              %a.link.btn-wishlist{href: "wishlist.html"}
-                %i.material-icons favorite
-                %span wishlist
-  .product-tab-area.float-left.w-100
-    .container
-      .tabs
-        %ul.nav.nav-tabs.justify-content-start
-          %li.nav-item
-            %a#tab1.nav-link.active{"data-toggle" => "tab", href: "#product-tab1"}
-              .tab-title Description
-          %li.nav-item
-            %a#tab2.nav-link{"data-toggle" => "tab", href: "#product-tab2"}
-              .tab-title Reviews (2)
-      .tab-content.float-left.w-100
-        #product-tab1.tab-pane.active{"aria-labelledby" => "tab1", role: "tabpanel"}
-          .description
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis viverra purus, non viverra nulla. Sed vehicula libero eu lectus eleifend volutpat. Sed et placerat arcu. Proin mi leo, interdum eu tortor at, euismod gravida velit. Fusce non enim lectus. Duis euismod, lorem vitae pharetra rhoncus, ligula risus elementum nunc, at interdum eros nunc eget augue. Donec dapibus nec diam ut tempor. Duis malesuada neque turpis, ut congue ipsum euismod eget. Sed egestas ipsum enim, sed semper magna auctor non. Praesent risus nunc, ultricies vel velit nec, fringilla venenatis sem. Nunc condimentum, elit sed posuere accumsan, mauris nisl ornare metus, nec hendrerit quam velit ut nibh. Vivamus sodales neque vel sodales porta. Mauris hendrerit felis in mi auctor posuere. Mauris a consequat sapien, eget condimentum risus. Curabitur iaculis lorem non pretium varius. In hac habitasse platea dictumst.
-        #product-tab2.tab-pane{"aria-labelledby" => "tab2", role: "tabpanel"}
-          .reviews-tab.float-left.w-100
-            .ttreview-tab.float-left.w-100.p-30
-              %h2 Customer Reviews
-              .rating.float-left.w-100
-                .product-ratings.d-inline-block.align-middle
-                  %span.fa.fa-stack
-                    %i.material-icons star
-                  %span.fa.fa-stack
-                    %i.material-icons star
-                  %span.fa.fa-stack
-                    %i.material-icons star
-                  %span.fa.fa-stack
-                    %i.material-icons.off star
-                  %span.fa.fa-stack
-                    %i.material-icons.off star
-              .review-title.float-left.w-100
-                %span.user admin
-                %span.date – February 14, 2019
-              .review-desc.float-left.w-100 Aliquam at ipsum tellus. Donec arcu est, posuere quis orci vel, commodo cursus augue.
-            %form.rating-form.float-left.w-100{action: "#"}
-              %h5 Add your rating
-              .rating
-                .rating-stars.text-left
-                  %ul#stars
-                    %li.star{"data-value" => "1", title: "Poor"}
-                      %i.material-icons star
-                    %li.star{"data-value" => "2", title: "Fair"}
-                      %i.material-icons star
-                    %li.star{"data-value" => "3", title: "Good"}
-                      %i.material-icons star
-                    %li.star{"data-value" => "4", title: "Excellent"}
-                      %i.material-icons star
-                    %li.star{"data-value" => "5", title: "WOW!!!"}
-                      %i.material-icons star
-                .success-box
-                  .clearfix
-                  .text-message.text-success
-                  .clearfix
-              .row.d-block
-                .col-sm-6.float-left.form-group
-                  %label
-                    Name
-                    %span.required *
-                  %input{placeholder: "", required: "", type: "text"}/
-                .col-sm-6.float-left.form-group
-                  %label
-                    Email
-                    %span.required *
-                  %input#r-email{placeholder: "", required: "", type: "email"}/
-                .col-sm-12.float-left.form-group
-                  %label{for: "r-textarea"} Your Review
-                  %textarea#r-textarea.w-100{cols: "30", name: "review", rows: "10"}
-              %input.btn.btn-primary.submit{type: "submit", value: "Submit Review"}/
-  #product-accessories.product-accessories.my-40.w-100.float-left
-    .container
-      .row
-        .tt-title.d-inline-block.float-none.w-100.text-center You might also like
-        .product-accessories-content.products.grid.owl-carousel
-          .product-layouts
-            .product-thumb
-              .image.zoom
-                %a{href: "product-details.html"}
-                  %img{alt: "01", src: asset_path('products/01.jpg')}/
-                  %img.second_image.img-responsive{alt: "02", src: asset_path('products/01.jpg')}/
-              .thumb-description
-                .caption
-                  %h4.product-title.text-capitalize
-                    %a{href: "product-details.html"} aliquam quaerat voluptatem
-                .rating
-                  .product-ratings.d-inline-block.align-middle
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                .price
-                  .regular-price $100.00
-                  .old-price $150.00
-                .button-wrapper
-                  .button-group.text-center
-                    %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons shopping_cart
-                      %span Add to cart
-                    %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
-                      %i.material-icons favorite
-                      %span wishlist
-                    %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons visibility
-                      %span Quick View
-          .product-layouts
-            .product-thumb
-              .image.zoom
-                %a{href: "product-details.html"}
-                  %img{alt: "02", src: asset_path('products/02.jpg')}/
-                  %img.second_image.img-responsive{alt: "03", src: asset_path('products/02.jpg')}/
-              .thumb-description
-                .caption
-                  %h4.product-title.text-capitalize
-                    %a{href: "product-details.html"} aspetur autodit autfugit
-                .rating
-                  .product-ratings.d-inline-block.align-middle
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                .price
-                  .regular-price $100.00
-                  .old-price $150.00
-                .button-wrapper
-                  .button-group.text-center
-                    %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons shopping_cart
-                      %span Add to cart
-                    %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
-                      %i.material-icons favorite
-                      %span wishlist
-                    %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons visibility
-                      %span Quick View
-          .product-layouts
-            .product-thumb
-              .image.zoom
-                %a{href: "product-details.html"}
-                  %img{alt: "03", src: asset_path('products/03.jpg')}/
-                  %img.second_image.img-responsive{alt: "04", src: asset_path('products/03.jpg')}/
-              .thumb-description
-                .caption
-                  %h4.product-title.text-capitalize
-                    %a{href: "product-details.html"} magni dolores eosquies
-                .rating
-                  .product-ratings.d-inline-block.align-middle
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                .price
-                  .regular-price $100.00
-                  .old-price $150.00
-                .button-wrapper
-                  .button-group.text-center
-                    %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons shopping_cart
-                      %span Add to cart
-                    %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
-                      %i.material-icons favorite
-                      %span wishlist
-                    %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons visibility
-                      %span Quick View
-          .product-layouts
-            .product-thumb
-              .image.zoom
-                %a{href: "product-details.html"}
-                  %img{alt: "04", src: asset_path('products/04.jpg')}/
-                  %img.second_image.img-responsive{alt: "05", src: asset_path('products/04.jpg')}/
-              .thumb-description
-                .caption
-                  %h4.product-title.text-capitalize
-                    %a{href: "product-details.html"} voluptas nulla pariatur
-                .rating
-                  .product-ratings.d-inline-block.align-middle
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                .price
-                  .regular-price $100.00
-                  .old-price $150.00
-                .button-wrapper
-                  .button-group.text-center
-                    %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons shopping_cart
-                      %span Add to cart
-                    %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
-                      %i.material-icons favorite
-                      %span wishlist
-                    %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons visibility
-                      %span Quick View
-          .product-layouts
-            .product-thumb
-              .image.zoom
-                %a{href: "product-details.html"}
-                  %img{alt: "05", src: asset_path('products/05.jpg')}/
-                  %img.second_image.img-responsive{alt: "06", src: asset_path('products/05.jpg')}/
-              .thumb-description
-                .caption
-                  %h4.product-title.text-capitalize
-                    %a{href: "product-details.html"} aliquam quat voluptatem
-                .rating
-                  .product-ratings.d-inline-block.align-middle
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                .price
-                  .regular-price $100.00
-                  .old-price $150.00
-                .button-wrapper
-                  .button-group.text-center
-                    %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons shopping_cart
-                      %span Add to cart
-                    %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
-                      %i.material-icons favorite
-                      %span wishlist
-                    %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons visibility
-                      %span Quick View
-          .product-layouts
-            .product-thumb
-              .image.zoom
-                %a{href: "product-details.html"}
-                  %img{alt: "06", src: asset_path('products/06.jpg')}/
-                  %img.second_image.img-responsive{alt: "07", src: asset_path('products/06.jpg')}/
-              .thumb-description
-                .caption
-                  %h4.product-title.text-capitalize
-                    %a{href: "product-details.html"} voluptas sit aspernatur
-                .rating
-                  .product-ratings.d-inline-block.align-middle
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                    %span.fa.fa-stack
-                      %i.material-icons.off star
-                .price
-                  .regular-price $100.00
-                  .old-price $150.00
-                .button-wrapper
-                  .button-group.text-center
-                    %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons shopping_cart
-                      %span Add to cart
-                    %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
-                      %i.material-icons favorite
-                      %span wishlist
-                    %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
-                      %i.material-icons visibility
-                      %span Quick View
+-#   .product-deatils-section.float-left.w-100
+-#     .container
+-#       .row
+-#         .left-columm.col-lg-5.col-md-5
+-#           .product-large-image.tab-content
+-#             #product-01.tab-pane.active{"aria-labelledby" => "product-tab-01", role: "tabpanel"}
+-#               .single-img.img-full
+-#                 %a{href: "img/products/01.jpg"}
+-#                   %img.img-fluid.zoomImg{alt: "", src: asset_path('products/01.jpg')}/
+-#             #product-02.tab-pane{"aria-labelledby" => "product-tab-02", role: "tabpanel"}
+-#               .single-img
+-#                 %a{href: "img/products/02.jpg"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/02.jpg')}/
+-#             #product-03.tab-pane{"aria-labelledby" => "product-tab-03", role: "tabpanel"}
+-#               .single-img
+-#                 %a{href: "img/products/03.jpg"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/03.jpg')}/
+-#             #product-04.tab-pane{"aria-labelledby" => "product-tab-04", role: "tabpanel"}
+-#               .single-img
+-#                 %a{href: "img/products/04.jpg"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/04.jpg')}/
+-#             #product-05.tab-pane{"aria-labelledby" => "product-tab-05", role: "tabpanel"}
+-#               .single-img
+-#                 %a{href: "img/products/05.jpg"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/05.jpg')}/
+-#           .default.small-image-list.float-left.w-100
+-#             .nav-add.small-image-slider-single-product-tabstyle-3.owl-carousel{role: "tablist"}
+-#               .single-small-image.img-full
+-#                 %a#product-tab-01.img.active{"data-toggle" => "tab", href: "#product-01"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/01.jpg')}/
+-#               .single-small-image.img-full
+-#                 %a#product-tab-02.img{"data-toggle" => "tab", href: "#product-02"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/02.jpg')}/
+-#               .single-small-image.img-full
+-#                 %a#product-tab-03.img{"data-toggle" => "tab", href: "#product-03"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/03.jpg')}/
+-#               .single-small-image.img-full
+-#                 %a#product-tab-04.img{"data-toggle" => "tab", href: "#product-04"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/04.jpg')}/
+-#               .single-small-image.img-full
+-#                 %a#product-tab-05.img{"data-toggle" => "tab", href: "#product-05"}
+-#                   %img.img-fluid{alt: "", src: asset_path('products/05.jpg')}/
+-#         .right-columm.col-lg-7.col-md-7
+-#           .product-information
+-#             %h4.product-title.text-capitalize.float-left.w-100
+-#               %a.float-left.w-100{href: "product-details.html"} aliquam quaerat voluptatem
+-#             .description
+-#               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis viverra purus, non viverra nulla. Sed vehicula libero eu lectus eleifend volutpat. Sed et placerat arcu. Proin mi leo, interdum eu tortor at, euismod gravida velit. Fusce non enim lectus. Duis euismod, lorem vitae pharetra rhoncus, ligula risus elementum nunc, at interdum eros nunc eget augue. Donec dapibus nec diam ut tempor. Duis malesuada neque turpis, ut congue ipsum euismod eget. Sed egestas ipsum enim, sed semper magna auctor non.
+-#             .rating
+-#               .product-ratings.d-inline-block.align-middle
+-#                 %span.fa.fa-stack
+-#                   %i.material-icons star
+-#                 %span.fa.fa-stack
+-#                   %i.material-icons star
+-#                 %span.fa.fa-stack
+-#                   %i.material-icons star
+-#                 %span.fa.fa-stack
+-#                   %i.material-icons.off star
+-#                 %span.fa.fa-stack
+-#                   %i.material-icons.off star
+-#               %a.review-down{href: "#"} (customer reviews)
+-#             .price.float-left.w-100.d-flex
+-#               .regular-price $100.00
+-#               .old-price $150.00
+-#             .product-variants.float-left.w-100
+-#               .col-md-3.col-sm-6.col-xs-12.size-options.d-flex.align-items-center
+-#                 %h5 Size:
+-#                 %select.form-control{name: "select"}
+-#                   %option{selected: "selected", value: ""} Size
+-#                   %option{value: "black"} Medium
+-#                   %option{value: "white"} Large
+-#                   %option{value: "gold"} Small
+-#               .color-option.d-flex.align-items-center
+-#                 %h5 color :
+-#                 %ul.color-categories
+-#                   %li.active
+-#                     %a.tt-pink{href: "#", title: "Pink"}
+-#                   %li
+-#                     %a.tt-blue{href: "#", title: "Blue"}
+-#                   %li
+-#                     %a.tt-yellow{href: "#", title: "Yellow"}
+-#             .btn-cart.d-flex.align-items-center.float-left.w-100
+-#               %h5 qty:
+-#               %input{type: "number", value: "1"}/
+-#               %button.btn.btn-primary.btn-cart.m-0{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+-#                 %i.material-icons shopping_cart
+-#                 Add To Cart
+-#             .tt-links.d-flex.align-items-center.float-left.w-100.mb-15
+-#               %a.link.btn-wishlist{href: "wishlist.html"}
+-#                 %i.material-icons favorite
+-#                 %span wishlist
+-#   .product-tab-area.float-left.w-100
+-#     .container
+-#       .tabs
+-#         %ul.nav.nav-tabs.justify-content-start
+-#           %li.nav-item
+-#             %a#tab1.nav-link.active{"data-toggle" => "tab", href: "#product-tab1"}
+-#               .tab-title Description
+-#           %li.nav-item
+-#             %a#tab2.nav-link{"data-toggle" => "tab", href: "#product-tab2"}
+-#               .tab-title Reviews (2)
+-#       .tab-content.float-left.w-100
+-#         #product-tab1.tab-pane.active{"aria-labelledby" => "tab1", role: "tabpanel"}
+-#           .description
+-#             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis viverra purus, non viverra nulla. Sed vehicula libero eu lectus eleifend volutpat. Sed et placerat arcu. Proin mi leo, interdum eu tortor at, euismod gravida velit. Fusce non enim lectus. Duis euismod, lorem vitae pharetra rhoncus, ligula risus elementum nunc, at interdum eros nunc eget augue. Donec dapibus nec diam ut tempor. Duis malesuada neque turpis, ut congue ipsum euismod eget. Sed egestas ipsum enim, sed semper magna auctor non. Praesent risus nunc, ultricies vel velit nec, fringilla venenatis sem. Nunc condimentum, elit sed posuere accumsan, mauris nisl ornare metus, nec hendrerit quam velit ut nibh. Vivamus sodales neque vel sodales porta. Mauris hendrerit felis in mi auctor posuere. Mauris a consequat sapien, eget condimentum risus. Curabitur iaculis lorem non pretium varius. In hac habitasse platea dictumst.
+-#         #product-tab2.tab-pane{"aria-labelledby" => "tab2", role: "tabpanel"}
+-#           .reviews-tab.float-left.w-100
+-#             .ttreview-tab.float-left.w-100.p-30
+-#               %h2 Customer Reviews
+-#               .rating.float-left.w-100
+-#                 .product-ratings.d-inline-block.align-middle
+-#                   %span.fa.fa-stack
+-#                     %i.material-icons star
+-#                   %span.fa.fa-stack
+-#                     %i.material-icons star
+-#                   %span.fa.fa-stack
+-#                     %i.material-icons star
+-#                   %span.fa.fa-stack
+-#                     %i.material-icons.off star
+-#                   %span.fa.fa-stack
+-#                     %i.material-icons.off star
+-#               .review-title.float-left.w-100
+-#                 %span.user admin
+-#                 %span.date – February 14, 2019
+-#               .review-desc.float-left.w-100 Aliquam at ipsum tellus. Donec arcu est, posuere quis orci vel, commodo cursus augue.
+-#             %form.rating-form.float-left.w-100{action: "#"}
+-#               %h5 Add your rating
+-#               .rating
+-#                 .rating-stars.text-left
+-#                   %ul#stars
+-#                     %li.star{"data-value" => "1", title: "Poor"}
+-#                       %i.material-icons star
+-#                     %li.star{"data-value" => "2", title: "Fair"}
+-#                       %i.material-icons star
+-#                     %li.star{"data-value" => "3", title: "Good"}
+-#                       %i.material-icons star
+-#                     %li.star{"data-value" => "4", title: "Excellent"}
+-#                       %i.material-icons star
+-#                     %li.star{"data-value" => "5", title: "WOW!!!"}
+-#                       %i.material-icons star
+-#                 .success-box
+-#                   .clearfix
+-#                   .text-message.text-success
+-#                   .clearfix
+-#               .row.d-block
+-#                 .col-sm-6.float-left.form-group
+-#                   %label
+-#                     Name
+-#                     %span.required *
+-#                   %input{placeholder: "", required: "", type: "text"}/
+-#                 .col-sm-6.float-left.form-group
+-#                   %label
+-#                     Email
+-#                     %span.required *
+-#                   %input#r-email{placeholder: "", required: "", type: "email"}/
+-#                 .col-sm-12.float-left.form-group
+-#                   %label{for: "r-textarea"} Your Review
+-#                   %textarea#r-textarea.w-100{cols: "30", name: "review", rows: "10"}
+-#               %input.btn.btn-primary.submit{type: "submit", value: "Submit Review"}/
+-#   #product-accessories.product-accessories.my-40.w-100.float-left
+-#     .container
+-#       .row
+-#         .tt-title.d-inline-block.float-none.w-100.text-center You might also like
+-#         .product-accessories-content.products.grid.owl-carousel
+-#           .product-layouts
+-#             .product-thumb
+-#               .image.zoom
+-#                 %a{href: "product-details.html"}
+-#                   %img{alt: "01", src: asset_path('products/01.jpg')}/
+-#                   %img.second_image.img-responsive{alt: "02", src: asset_path('products/01.jpg')}/
+-#               .thumb-description
+-#                 .caption
+-#                   %h4.product-title.text-capitalize
+-#                     %a{href: "product-details.html"} aliquam quaerat voluptatem
+-#                 .rating
+-#                   .product-ratings.d-inline-block.align-middle
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                 .price
+-#                   .regular-price $100.00
+-#                   .old-price $150.00
+-#                 .button-wrapper
+-#                   .button-group.text-center
+-#                     %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons shopping_cart
+-#                       %span Add to cart
+-#                     %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+-#                       %i.material-icons favorite
+-#                       %span wishlist
+-#                     %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons visibility
+-#                       %span Quick View
+-#           .product-layouts
+-#             .product-thumb
+-#               .image.zoom
+-#                 %a{href: "product-details.html"}
+-#                   %img{alt: "02", src: asset_path('products/02.jpg')}/
+-#                   %img.second_image.img-responsive{alt: "03", src: asset_path('products/02.jpg')}/
+-#               .thumb-description
+-#                 .caption
+-#                   %h4.product-title.text-capitalize
+-#                     %a{href: "product-details.html"} aspetur autodit autfugit
+-#                 .rating
+-#                   .product-ratings.d-inline-block.align-middle
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                 .price
+-#                   .regular-price $100.00
+-#                   .old-price $150.00
+-#                 .button-wrapper
+-#                   .button-group.text-center
+-#                     %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons shopping_cart
+-#                       %span Add to cart
+-#                     %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+-#                       %i.material-icons favorite
+-#                       %span wishlist
+-#                     %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons visibility
+-#                       %span Quick View
+-#           .product-layouts
+-#             .product-thumb
+-#               .image.zoom
+-#                 %a{href: "product-details.html"}
+-#                   %img{alt: "03", src: asset_path('products/03.jpg')}/
+-#                   %img.second_image.img-responsive{alt: "04", src: asset_path('products/03.jpg')}/
+-#               .thumb-description
+-#                 .caption
+-#                   %h4.product-title.text-capitalize
+-#                     %a{href: "product-details.html"} magni dolores eosquies
+-#                 .rating
+-#                   .product-ratings.d-inline-block.align-middle
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                 .price
+-#                   .regular-price $100.00
+-#                   .old-price $150.00
+-#                 .button-wrapper
+-#                   .button-group.text-center
+-#                     %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons shopping_cart
+-#                       %span Add to cart
+-#                     %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+-#                       %i.material-icons favorite
+-#                       %span wishlist
+-#                     %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons visibility
+-#                       %span Quick View
+-#           .product-layouts
+-#             .product-thumb
+-#               .image.zoom
+-#                 %a{href: "product-details.html"}
+-#                   %img{alt: "04", src: asset_path('products/04.jpg')}/
+-#                   %img.second_image.img-responsive{alt: "05", src: asset_path('products/04.jpg')}/
+-#               .thumb-description
+-#                 .caption
+-#                   %h4.product-title.text-capitalize
+-#                     %a{href: "product-details.html"} voluptas nulla pariatur
+-#                 .rating
+-#                   .product-ratings.d-inline-block.align-middle
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                 .price
+-#                   .regular-price $100.00
+-#                   .old-price $150.00
+-#                 .button-wrapper
+-#                   .button-group.text-center
+-#                     %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons shopping_cart
+-#                       %span Add to cart
+-#                     %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+-#                       %i.material-icons favorite
+-#                       %span wishlist
+-#                     %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons visibility
+-#                       %span Quick View
+-#           .product-layouts
+-#             .product-thumb
+-#               .image.zoom
+-#                 %a{href: "product-details.html"}
+-#                   %img{alt: "05", src: asset_path('products/05.jpg')}/
+-#                   %img.second_image.img-responsive{alt: "06", src: asset_path('products/05.jpg')}/
+-#               .thumb-description
+-#                 .caption
+-#                   %h4.product-title.text-capitalize
+-#                     %a{href: "product-details.html"} aliquam quat voluptatem
+-#                 .rating
+-#                   .product-ratings.d-inline-block.align-middle
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                 .price
+-#                   .regular-price $100.00
+-#                   .old-price $150.00
+-#                 .button-wrapper
+-#                   .button-group.text-center
+-#                     %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons shopping_cart
+-#                       %span Add to cart
+-#                     %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+-#                       %i.material-icons favorite
+-#                       %span wishlist
+-#                     %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons visibility
+-#                       %span Quick View
+-#           .product-layouts
+-#             .product-thumb
+-#               .image.zoom
+-#                 %a{href: "product-details.html"}
+-#                   %img{alt: "06", src: asset_path('products/06.jpg')}/
+-#                   %img.second_image.img-responsive{alt: "07", src: asset_path('products/06.jpg')}/
+-#               .thumb-description
+-#                 .caption
+-#                   %h4.product-title.text-capitalize
+-#                     %a{href: "product-details.html"} voluptas sit aspernatur
+-#                 .rating
+-#                   .product-ratings.d-inline-block.align-middle
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                     %span.fa.fa-stack
+-#                       %i.material-icons.off star
+-#                 .price
+-#                   .regular-price $100.00
+-#                   .old-price $150.00
+-#                 .button-wrapper
+-#                   .button-group.text-center
+-#                     %button.btn.btn-primary.btn-cart{"data-target" => "#cart-pop", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons shopping_cart
+-#                       %span Add to cart
+-#                     %a.btn.btn-primary.btn-wishlist{href: "wishlist.html"}
+-#                       %i.material-icons favorite
+-#                       %span wishlist
+-#                     %button.btn.btn-primary.btn-quickview{"data-target" => "#product_view", "data-toggle" => "modal", type: "button"}
+-#                       %i.material-icons visibility
+-#                       %span Quick View
